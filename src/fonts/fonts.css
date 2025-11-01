@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./SF-Pro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rounded';
+  src: url('./SF-Pro-Rounded.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rounded Heavy';
+  src: url('./SF-Pro-Rounded-Heavy.woff') format('woff');
+}
