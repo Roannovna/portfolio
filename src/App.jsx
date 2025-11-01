@@ -1,7 +1,9 @@
+import { Clock } from './components/clock'
+
 function App() {
   return (
     <>
-      <h1>Roannovna</h1>
+      <Clock />
     </>
   )
 }
