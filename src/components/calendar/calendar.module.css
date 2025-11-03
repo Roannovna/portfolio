@@ -1,8 +1,25 @@
-.calendar__container {
+.calendar {
   display: flex;
   width: 325px;
   height: 150px;
   border-radius: 20px;
   padding: 10px;
   background-color: var(--white);
+  gap: 20px;
+}
+
+.calendar__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar__cover {
+  display: flex;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  border-radius: 10px;
 }

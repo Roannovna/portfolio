@@ -1,17 +1,18 @@
 export const calendarStyles = {
   width: "124px",
-  height: "130px",
+  height: "min-content",
+  maxHeight: "130px",
   margin: "0px",
   padding: "0px",
   gap: "4px",
-  fontFamily: "SF Pro",
-  fontSize: "8px",
   "& .MuiPickersCalendarHeader-root": {
     margin: "0px",
     padding: "0px",
     height: "15px",
     minHeight: "fit-content",
     maxHeight: "fit-content",
+    fontFamily: "SF Pro",
+    fontSize: "8px",
   },
   "& .MuiPickersCalendarHeader-switchViewButton": {
     display: "none",
@@ -19,14 +20,16 @@ export const calendarStyles = {
   },
   "& .MuiPickersCalendarHeader-label": {
     fontFamily: "SF Pro",
-    fontSize: "8px",
+    fontSize: "9px",
     fontWeight: "bold",
+    lineHeight: "1.66",
+    letterSpacing: "0.08em",
     textTransform: "uppercase",
     color: "var(--red)",
     paddingLeft: "5px",
   },
-  "& .MuiDayCalendar-header span:nth-child(6), \
-  & .MuiDayCalendar-header span:nth-child(7)": {
+  "& .MuiDayCalendar-header span:nth-of-type(6), \
+  & .MuiDayCalendar-header span:nth-of-type(7)": {
     color: "var(--grey)",
   },
   "& .MuiDayCalendar-weekDayLabel": {
@@ -40,7 +43,7 @@ export const calendarStyles = {
     margin: "0px",
   },
   "& .MuiPickersSlideTransition-root": {
-    minHeight: "100px",
+    minHeight: "91px",
   },
   "& .MuiDayCalendar-monthContainer": {
     display: "flex",
@@ -59,10 +62,11 @@ export const calendarStyles = {
     fontSize: "8px",
     "&: focus": { outline: "none" },
   },
-  "& .MuiDayCalendar-weekContainer button:nth-child(6), \
-  & .MuiDayCalendar-weekContainer button:nth-child(7)": {
-    color: "var(--grey)",
-  },
+  "& .MuiDayCalendar-weekContainer button[aria-colindex='6']:not(.Mui-selected):not(.Mui-disabled), \
+    & .MuiDayCalendar-weekContainer button[aria-colindex='7']:not(.Mui-selected):not(.Mui-disabled)":
+    {
+      color: "var(--grey)",
+    },
   "& .MuiPickersDay-today, \
   & .MuiPickersDay-today:focus, \
   & .MuiPickersDay-today:hover": {

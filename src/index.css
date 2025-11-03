@@ -31,7 +31,7 @@ body {
   color: var(--dark-grey);
   background-color: var(--light-pink);
   background-image: radial-gradient(circle, var(--dark-pink), var(--light-pink));
-  height: 100vh; /*TODO: убрать высоту */
+  height: 100%; /*TODO: убрать высоту */
 }
 
 h1,
