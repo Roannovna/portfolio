@@ -1,0 +1,19 @@
+.contacts_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 325px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: var(--pink);
+}
+
+.icon_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+}
