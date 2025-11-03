@@ -1,10 +1,16 @@
-import { Clock } from './components/clock'
+import { Clock } from './components/clock';
+import { Calendar } from './components/calendar';
 
 function App() {
   return (
-    <>
-      <Clock />
-    </>
+    <main>
+      <div>
+        <Clock />
+      </div>
+      <div>
+        <Calendar />
+      </div>
+    </main>
   )
 }
 

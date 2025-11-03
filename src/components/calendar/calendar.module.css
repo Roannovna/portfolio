@@ -1,0 +1,8 @@
+.calendar__container {
+  display: flex;
+  width: 325px;
+  height: 150px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: var(--white);
+}
