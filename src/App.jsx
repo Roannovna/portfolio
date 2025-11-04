@@ -1,6 +1,7 @@
 import { Clock } from './components/clock';
 import { Calendar } from './components/calendar';
 import { Contacts } from './components/contacts';
+import { Player } from './components/player';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       </div>
       <div>
         <Contacts />
+      </div>
+      <div>
+        <Player />
       </div>
     </main>
   )
