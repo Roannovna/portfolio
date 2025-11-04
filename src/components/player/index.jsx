@@ -12,7 +12,10 @@ export function Player() {
     <div className={style.player__container}>
       <div className={style.vinyl_player}>
         <div className={style.ton_arm__base}></div>
-        <div className={style.ton_arm}></div>
+        <div className={style.ton_arm}>
+          {/* <div className={style.ton_arm__shoulder}></div>
+          <div className={style.ton_arm__arm}></div> */}
+        </div>
         <div className={style.vinyl_record}>
           <div className={style.vinyl_record__disc}></div>
           <div className={style.vinyl_record__label}></div>
@@ -32,3 +35,5 @@ export function Player() {
     </div>
   )
 }
+
+// TODO: настроить анимацию из двух частей
