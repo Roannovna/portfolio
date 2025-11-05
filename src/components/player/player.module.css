@@ -97,11 +97,10 @@
   animation: spin-disc 30s linear infinite;
 }
 
-.vinyl_record__label {
+.vinyl_record__label img{
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-image: url(./disc-labels/roannovna.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -165,6 +164,10 @@
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+}
+
+.control__btn:disabled {
+  display: none;
 }
 
 .control__btn img {

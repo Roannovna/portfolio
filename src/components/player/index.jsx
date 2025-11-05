@@ -1,11 +1,10 @@
 import style from './player.module.css'
-import prev_btn from './vinyl-player/prev-btn.svg'
-import play_btn from './vinyl-player/play-btn.svg'
-import pause_btn from './vinyl-player/pause-btn.svg'
-import next_btn from './vinyl-player/next-btn.svg'
+import { btns } from './vinyl-player/imp'
+import def_label from './disc-label/roannovna.png'
 
-const artistName = 'Roannovna'
-const songTitle = 'Frontend developer'
+const artistName = 'Roannovna';
+const songTitle = 'Frontend Developer';
+const diskLabel = def_label;
 
 export function Player() {
   return (
@@ -18,7 +17,7 @@ export function Player() {
         </div>
         <div className={style.vinyl_record}>
           <div className={style.vinyl_record__disc}></div>
-          <div className={style.vinyl_record__label}></div>
+          <div className={style.vinyl_record__label}><img src={diskLabel} alt="disk label" /></div>
         </div>
       </div>
       <div className={style.multimedia_block}>
@@ -27,9 +26,10 @@ export function Player() {
           <div className={style.song__title}>{songTitle}</div>
         </div>
         <div className={style.control__block}>
-          <button className={style.control__btn}><img src={prev_btn} alt="prev button" /></button>
-          <button className={style.control__btn}><img src={play_btn} alt="play button" /></button>
-          <button className={style.control__btn}><img src={next_btn} alt="next button" /></button>
+          <button className={style.control__btn}><img src={btns.prev_btn} alt="prev button" /></button>
+          <button className={style.control__btn}><img src={btns.play_btn} alt="play button" /></button>
+          <button className={style.control__btn} disabled><img src={btns.pause_btn} alt="pause button" /></button>
+          <button className={style.control__btn}><img src={btns.next_btn} alt="next button" /></button>
         </div>
       </div>
     </div>
