@@ -1,0 +1,10 @@
+.tech_stack__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px 15px;
+  flex-wrap: wrap;
+  width:  325px;
+  height: fit-content;
+}

@@ -3,25 +3,17 @@ import { Calendar } from './components/calendar';
 import { Contacts } from './components/contacts';
 import { Player } from './components/player';
 import { DayNightWidget } from './components/day-night-widget';
+import { TechStack } from './components/tech-stack';
 
 function App() {
   return (
     <main>
-      <div>
-        <Clock />
-      </div>
-      <div>
-        <Calendar />
-      </div>
-      <div>
-        <Contacts />
-      </div>
-      <div>
-        <Player />
-      </div>
-      <div>
-        <DayNightWidget />
-      </div>
+      <Clock />
+      <Calendar />
+      <Contacts />
+      <Player />
+      <DayNightWidget />
+      <TechStack />
     </main>
   )
 }
