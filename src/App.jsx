@@ -2,6 +2,7 @@ import { Clock } from './components/clock';
 import { Calendar } from './components/calendar';
 import { Contacts } from './components/contacts';
 import { Player } from './components/player';
+import { DayNightWidget } from './components/day-night-widget';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       </div>
       <div>
         <Player />
+      </div>
+      <div>
+        <DayNightWidget />
       </div>
     </main>
   )

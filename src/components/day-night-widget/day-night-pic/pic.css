@@ -1,0 +1,120 @@
+/* Smooth transitions for theme changes */
+#pic {
+  transition: all 2s ease-in-out;
+}
+
+.night-theme {
+  --background: #4327AE;
+  --dark-cloud: #281299;
+  --light-cloud: #8C77D6;
+  --sun: #E7DDF4;
+  --lower-mount: #004150;
+  --medium-mount: #003B54;
+  --upper-mount: #003B5B;
+  --water: #4F33BA;
+  --glare: #6A50CB;
+}
+
+.day-theme {
+  --background: #CD4970;
+  --dark-cloud: #B5305D;
+  --light-cloud: #FFA8A4;
+  --sun: #FFC9AF;
+  --upper-mount: #43045F;
+  --medium-mount: #4F0463;
+  --lower-mount: #5E0A6C;
+  --water: #DB577E;
+  --glare: #F0779A;
+}
+
+.transitional-theme {
+  --background: #EB9D63;
+  --dark-cloud: #D07B46;
+  --light-cloud: #FFEBAD;
+  --sun: #FBFFB7;
+  --upper-mount: #6D0F46;
+  --medium-mount: #710F3F;
+  --lower-mount: #7C1641;
+  --water: #FBAD73;
+  --glare: #FFBD8B;
+}
+
+#background {
+  fill: var(--background);
+}
+
+#sun  #sun{
+  fill: var(--sun);
+}
+
+#sun #big_ray,
+#sun #small_ray {
+  fill: var(--sun);
+  fill-opacity: 0.2;
+}
+
+#clouds #dark {
+  fill: var(--dark-cloud);
+}
+
+#clouds #dark_opacity {
+  fill: var(--dark-cloud);
+  fill-opacity: 0.7;
+}
+
+#clouds #light {
+  fill: var(--light-cloud);
+}
+
+#clouds #light_opacity {
+  fill: var(--light-cloud);
+  fill-opacity: 0.7;
+}
+
+#mounts #upper_level {
+  fill: var(--upper-mount);
+}
+
+#mounts #medium_level {
+  fill: var(--medium-mount);
+}
+
+#mounts #lower_level {
+  fill: var(--lower-mount);
+}
+
+#waterfall #water {
+  fill: var(--water);
+}
+
+#waterfall #waves #wave {
+  fill: var(--glare)
+}
+
+#foam #foam_light {
+  fill: var(--sun);
+}
+
+#foam #foam_dark {
+  fill: var(--water);
+}
+
+#bubbles #bubbles_light {
+  fill: var(--sun);
+}
+
+#bubbles #bubbles_dark {
+  fill: var(--water);
+}
+
+#river #water {
+  fill: var(--water);
+}
+
+#river #waves #light_waves {
+  fill: var(--sun);
+}
+
+#river #waves #dark_waves {
+  fill: var(--glare);
+}
