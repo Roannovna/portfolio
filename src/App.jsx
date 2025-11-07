@@ -4,6 +4,7 @@ import { Contacts } from './components/contacts';
 import { Player } from './components/player';
 import { DayNightWidget } from './components/day-night-widget';
 import { TechStack } from './components/tech-stack';
+import { Dock } from './components/dock';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Player />
       <DayNightWidget />
       <TechStack />
+      <Dock />
     </main>
   )
 }
