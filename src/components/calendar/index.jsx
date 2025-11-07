@@ -5,10 +5,14 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import 'dayjs/locale/ru';
 import { CalendarCovers } from './calendar-covers';
+import { ipadTokens, Сontainer } from '../../tokens/ipad-ui-tokens';
 
 export function Calendar() {
   return (
-    <div className={style.calendar}>
+    <Сontainer 
+      {...ipadTokens.widget.medium} 
+      style={{ padding: '10px', gap: '20px' }}
+    >
       <div className={style.calendar__container}>
         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru" width="100%">
           <DateCalendar 
@@ -32,6 +36,6 @@ export function Calendar() {
       <div className={style.calendar__cover}>
         <CalendarCovers />
       </div>
-    </div>
+    </Сontainer>
   );
 }
