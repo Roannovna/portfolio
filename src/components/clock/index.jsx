@@ -27,7 +27,7 @@ export function Clock() {
   const rotations = [-6, 5, 0, -4, 5];
 
   return (
-    <Сontainer {...ipadTokens.widget.medium} style={{ padding: '10px'}}>
+    <Сontainer {...ipadTokens.widget.medium} style={{ padding: 0 }}>
       <div className={style.clock}>
         {timeString.map((digit, i) => (
           <span

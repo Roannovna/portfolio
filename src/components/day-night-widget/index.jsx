@@ -1,10 +1,11 @@
-import style from './day-night-widget.module.css';
 import { Picture } from './day-night-pic/picture.jsx';
+import { ipadTokens, Сontainer } from '/src/tokens/ipad-ui-tokens';
+
 
 export function DayNightWidget() {
   return (
-    <div className={style.widget__container}>
+    <Сontainer {...ipadTokens.widget.large}>
       <Picture />
-    </div>
+    </Сontainer>
   )
 }

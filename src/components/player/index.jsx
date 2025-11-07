@@ -3,6 +3,7 @@ import { btns } from './vinyl-player/imp'
 import { TRACKS } from './tracks-data/tracks-data'
 import def_label from './disc-label/roannovna.png'
 import { useState, useRef, useEffect } from 'react'
+import { ipadTokens, Сontainer} from '/src/tokens/ipad-ui-tokens'
 
 export function Player() {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
@@ -74,37 +75,39 @@ export function Player() {
   }, []);
 
   return (
-    <div className={style.player__container}>
-      <audio ref={audioRef} />
-      <div className={style.vinyl_player}>
-        <div className={style.ton_arm__base}></div>
-        <div className={style.ton_arm}>
-          {/* <div className={style.ton_arm__shoulder}></div>
-          <div className={style.ton_arm__arm}></div> */}
+    <Сontainer {...ipadTokens.widget.large} style={{ padding: 0 }}>
+      <div className={style.player__container}>
+        <audio ref={audioRef} />
+        <div className={style.vinyl_player}>
+          <div className={style.ton_arm__base}></div>
+          <div className={style.ton_arm}>
+            {/* <div className={style.ton_arm__shoulder}></div>
+            <div className={style.ton_arm__arm}></div> */}
+          </div>
+          <div className={style.vinyl_record}>
+            <div className={style.vinyl_record__disc}></div>
+            <div className={style.vinyl_record__label}><img src={currentTrack.cover} alt="disk label" /></div>
+          </div>
         </div>
-        <div className={style.vinyl_record}>
-          <div className={style.vinyl_record__disc}></div>
-          <div className={style.vinyl_record__label}><img src={currentTrack.cover} alt="disk label" /></div>
+        <div className={style.multimedia_block}>
+          <div className={style.song__data}>
+            <div className={style.song__artist}>{currentTrack.artist}</div>
+            <div className={style.song__title}>{currentTrack.title}</div>
+          </div>
+          <div className={style.control__block}>
+            <button className={style.control__btn} onClick={handlePrev}><img src={btns.prev_btn} alt="prev button" /></button>
+            <button className={style.control__btn} onClick={handlePlayPause}>
+              {isPlaying ? (
+                <img src={btns.pause_btn} alt="pause button" />
+              ) : (
+                <img src={btns.play_btn} alt="play button" />
+              )}
+            </button>
+            <button className={style.control__btn} onClick={handleNext}><img src={btns.next_btn} alt="next button" /></button>
+          </div>
         </div>
       </div>
-      <div className={style.multimedia_block}>
-        <div className={style.song__data}>
-          <div className={style.song__artist}>{currentTrack.artist}</div>
-          <div className={style.song__title}>{currentTrack.title}</div>
-        </div>
-        <div className={style.control__block}>
-          <button className={style.control__btn} onClick={handlePrev}><img src={btns.prev_btn} alt="prev button" /></button>
-          <button className={style.control__btn} onClick={handlePlayPause}>
-            {isPlaying ? (
-              <img src={btns.pause_btn} alt="pause button" />
-            ) : (
-              <img src={btns.play_btn} alt="play button" />
-            )}
-          </button>
-          <button className={style.control__btn} onClick={handleNext}><img src={btns.next_btn} alt="next button" /></button>
-        </div>
-      </div>
-    </div>
+    </Сontainer>
   )
 }
 

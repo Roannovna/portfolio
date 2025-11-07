@@ -6,9 +6,10 @@ import { DayNightWidget } from './components/day-night-widget';
 import { TechStack } from './components/tech-stack';
 import { Dock } from './components/dock';
 
+
 function App() {
   return (
-    <main>
+    <>
       <Clock />
       <Calendar />
       <Contacts />
@@ -16,7 +17,7 @@ function App() {
       <DayNightWidget />
       <TechStack />
       <Dock />
-    </main>
+    </>
   )
 }
 

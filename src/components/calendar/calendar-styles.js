@@ -1,7 +1,7 @@
 export const calendarStyles = {
   width: "124px",
   height: "min-content",
-  maxHeight: "130px",
+  maxHeight: "120px",
   margin: "0px",
   padding: "0px",
   "& .MuiPickersCalendarHeader-root": {
@@ -47,7 +47,7 @@ export const calendarStyles = {
   "& .MuiDayCalendar-monthContainer": {
     display: "flex",
     flexDirection: "column",
-    gap: "2px",
+    gap: "4px",
   },
   "& .MuiDayCalendar-weekContainer": {
     margin: "0px",

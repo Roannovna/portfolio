@@ -11,7 +11,7 @@ export function Calendar() {
   return (
     <Сontainer 
       {...ipadTokens.widget.medium} 
-      style={{ padding: '10px', gap: '10px' }}
+      style={{ gap: '10px', padding: '10px' }}
     >
       <div className={style.calendar__container}>
         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru" width="100%">

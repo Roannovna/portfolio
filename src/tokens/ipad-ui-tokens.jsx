@@ -1,34 +1,15 @@
-// export const ipadTokens = {
-//   widget: {
-//     small: { w: 170, h: 170, br: 20 },
-//     medium: { w: 364, h: 170, br: 20 },
-//     large: { w: 364, h: 364, br: 20 },
-//   },
-//   icon: {
-//     app: { w: 76, h: 76, br: 16 },
-//     spot: { w: 40, h: 40, br: 8 },
-//   },
-//   spacing: {
-//     widgetGap: 24,
-//     iconGap: 16,
-//     dockPadding: 20,
-//   },
-// };
-
 export const ipadTokens = {
   widget: {
-    small: { w: 134, h: 134, br: 20 },
-    medium: { w: 287, h: 134, br: 20 },
-    large: { w: 287, h: 287, br: 20 },
+    small: { w: 140, h: 140, br: 20 },
+    medium: { w: 300, h: 140, br: 20 },
+    large: { w: 300, h: 300, br: 20 },
   },
   icon: {
-    app: { w: 59, h: 59, br: 13 },
-    spot: { w: 31, h: 31, br: 6 },
+    app: { w: 60, h: 60, br: 14 },
+    spot: { w: 30, h: 30, br: 7 },
   },
   spacing: {
-    widgetGap: 19,
-    iconGap: 12,
-    dockPadding: 15,
+    uniGap: 20,
   },
 };
 
@@ -36,9 +17,9 @@ export const Сontainer = ({ w, h, br, style: extraStyle, children }) => {
   return (
     <div
       style={{
-        width: w,
-        height: h,
-        borderRadius: br,
+        width: w + "px",
+        height: h + "px",
+        borderRadius: br + "px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
