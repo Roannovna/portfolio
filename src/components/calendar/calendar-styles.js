@@ -4,7 +4,6 @@ export const calendarStyles = {
   maxHeight: "130px",
   margin: "0px",
   padding: "0px",
-  gap: "4px",
   "& .MuiPickersCalendarHeader-root": {
     margin: "0px",
     padding: "0px",
@@ -26,7 +25,7 @@ export const calendarStyles = {
     letterSpacing: "0.08em",
     textTransform: "uppercase",
     color: "var(--red)",
-    paddingLeft: "5px",
+    paddingLeft: "8px",
   },
   "& .MuiDayCalendar-header span:nth-of-type(6), \
   & .MuiDayCalendar-header span:nth-of-type(7)": {
@@ -48,7 +47,7 @@ export const calendarStyles = {
   "& .MuiDayCalendar-monthContainer": {
     display: "flex",
     flexDirection: "column",
-    gap: "4px",
+    gap: "2px",
   },
   "& .MuiDayCalendar-weekContainer": {
     margin: "0px",
