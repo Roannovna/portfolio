@@ -1,15 +1,5 @@
 @import url('../../fonts/fonts.css');
 
-.clock__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 325px;
-  height: 150px;
-  border-radius: 20px;
-  background-color: var(--white);
-}
-
 .clock {
   font-family: 'Rounded Heavy', sans-serif;
   display: flex;

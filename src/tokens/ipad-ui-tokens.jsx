@@ -15,7 +15,7 @@ export const ipadTokens = {
   },
 };
 
-export const container = ({ w, h, br, children }) => {
+export const Сontainer = ({ w, h, br, style: extraStyle, children }) => {
   return (
     <div
       style={{
@@ -27,7 +27,9 @@ export const container = ({ w, h, br, children }) => {
         alignItems: "center",
         borderRadius: "20px",
         backgroundColor: "var(--white)",
-        overflow: "hidden",
+        overflow: "clip",
+        overflowClipMargin: "content-box",
+        ...extraStyle,
       }}
     >
       {children}
