@@ -4,16 +4,16 @@ import { useState } from 'react';
 import { ipadTokens } from '/src/tokens/ipad-ui-tokens';
 
 const iconSize = { 
-  width: ipadTokens.icon.app.w, 
-  height: ipadTokens.icon.app.w, 
-  borderRadius: ipadTokens.icon.app.br 
+  width: ipadTokens.icon.spot.w, 
+  height: ipadTokens.icon.spot.w, 
+  borderRadius: ipadTokens.icon.spot.br 
 };
 
-export function Dock({ className }) {
+export function Dock({ className, style: extraStyle }) {
   const [showFrame, setShowFrame] = useState(false);
 
   return (
-    <div className={`${style.dock__container} ${className}`}>
+    <div className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
       <button style={iconSize} className={style.dock__button} onClick={() => setShowFrame(true)}>
         <img src={projectIcons.slozhnoSosredotochitsya} alt="иконка сайта сложно сосредоточиться" />
       </button>

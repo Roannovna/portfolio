@@ -4,16 +4,16 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  border-radius: 24px;
+  border-radius: 15px;
   width: fit-content;
   gap: 10px;
   background-color: var(--white-opacity);
-  padding: 10px;
-  min-width: 290px;
+  padding: 7px;
+  min-width: 154px;
 }
 
 .dock__button {
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

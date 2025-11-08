@@ -1,47 +1,49 @@
 .home {
+  width: 90vw;
+  max-width: 1000px;
   padding: 20px;
   display: grid;
   gap: 20px;
-  justify-content: center;
   padding: 20px;
-  grid-template-columns: repeat(12, 60px);
-  grid-template-rows: repeat(9, 60px);
+  grid-auto-rows: max-content;
   grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  position: relative;
 }
 
 .home__clock {
-  grid-column: 1 / span 4;
-  grid-row: 1 / span 2;
+  grid-column: span 4 / span 4;
+  grid-row: span 2 / span 2;
 }
 
 .home__contacts {
-  grid-column: 1 / span 4;
-  grid-row: 3 / span 2;
+  grid-column: span 4 / span 4;
+  grid-row: span 2 / span 2;
 }
 
 .home__notions {
-  grid-column: 5 / span 4;
-  grid-row: 1 / span 4;
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
 }
 
 .home__player {
-  grid-column: 9 / span 4;
-  grid-row: 1 / span 4;
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
 }
 
 .home__day_night_widget {
-  grid-column: 1 / span 4;
-  grid-row: 5 / span 4;
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
 }
 
 .home__calendar {
-  grid-column: 5 / span 4;
-  grid-row: 5 / span 2;
+  grid-column: span 4 / span 4;
+  grid-row: span 2 / span 2;
 }
-/* .home__tech_stack */
 
 .home__dock {
-  grid-row: 9 / span 1;
-  grid-column: 5 / span 4;
-  justify-self: center;
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
 }

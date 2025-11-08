@@ -6,7 +6,7 @@ export const ipadTokens = {
   },
   icon: {
     app: { w: 60, h: 60, br: 14 },
-    spot: { w: 30, h: 30, br: 7 },
+    spot: { w: 40, h: 40, br: 8 },
   },
   spacing: {
     uniGap: 20,

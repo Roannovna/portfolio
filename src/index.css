@@ -29,12 +29,14 @@ body {
   justify-content: flex-start;
   align-items: center;
   justify-items: center;
+  justify-self: center;
   width: 100%;
   font-family: 'SF Pro', sans-serif;
   color: var(--dark-grey);
   background-color: var(--light-pink);
   background-image: radial-gradient(circle, var(--dark-pink), var(--light-pink));
-  height: 100vw; /*TODO: убрать высоту */
+  height: 100dvh;
+  position: relative;
 }
 
 button,
