@@ -1,9 +1,11 @@
 import { ipadTokens, Сontainer } from "../../tokens/ipad-ui-tokens.jsx";
 import style from "./notions.module.css";
 
-export function Notions() {
+export function Notions({ className }) {
   return (
-    <Сontainer {...ipadTokens.widget.large} 
+    <Сontainer 
+      className={className} 
+      {...ipadTokens.widget.large} 
       style={{alignItems: "flex-start", 
               flexDirection: "column", 
               justifyContent: "flex-start", 

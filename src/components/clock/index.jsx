@@ -2,7 +2,7 @@ import style from './clock.module.css';
 import { useEffect, useState } from 'react';
 import { ipadTokens, Сontainer } from '/src/tokens/ipad-ui-tokens';
 
-export function Clock() {
+export function Clock({ className }) {
   const [time, setTime] = useState(new Date());
   
   useEffect(() => {
@@ -27,7 +27,11 @@ export function Clock() {
   const rotations = [-6, 5, 0, -4, 5];
 
   return (
-    <Сontainer {...ipadTokens.widget.medium} style={{ padding: 0 }}>
+    <Сontainer 
+      className={className} 
+      {...ipadTokens.widget.medium} 
+      style={{ padding: 0 }}
+    >
       <div className={style.clock}>
         {timeString.map((digit, i) => (
           <span

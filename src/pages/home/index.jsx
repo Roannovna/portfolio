@@ -7,18 +7,19 @@ import { DayNightWidget } from "../../components/day-night-widget";
 import { TechStack } from "../../components/tech-stack";
 import { Dock } from "../../components/dock";
 import { Notions } from "../../components/notions";
+import { ipadTokens } from "/src/tokens/ipad-ui-tokens";
 
 export function Home() {
   return (
-    <main className={style.home}>
-      <Clock />
-      <Contacts />
-      <Notions />
-      <Player />
-      <DayNightWidget />
-      <Calendar />
-      <TechStack />
-      <Dock />
+    <main className={style.home} style={{ maxWidth: `calc(${ipadTokens.icon.app.w * 18}px + ${ipadTokens.spacing.uniGap * 17}px)`}}>
+      <Clock className={style.home__clock} />
+      <Contacts className={style.home__contacts}/>
+      <Notions className={style.home__notions}/>
+      <Player className={style.home__player}/>
+      <DayNightWidget className={style.home__day_night_widget}/>
+      <Calendar className={style.home__calendar}/>
+      <TechStack className={style.home__tech_stack}/>
+      <Dock className={style.home__dock}/>
     </main>
   );
 }

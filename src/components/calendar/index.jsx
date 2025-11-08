@@ -7,9 +7,10 @@ import 'dayjs/locale/ru';
 import { CalendarCovers } from './calendar-covers';
 import { ipadTokens, Сontainer } from '../../tokens/ipad-ui-tokens';
 
-export function Calendar() {
+export function Calendar({ className }) {
   return (
     <Сontainer 
+      className={className}
       {...ipadTokens.widget.medium} 
       style={{ gap: '10px', padding: '10px' }}
     >

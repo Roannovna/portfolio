@@ -5,7 +5,7 @@ import def_label from './disc-label/roannovna.png'
 import { useState, useRef, useEffect } from 'react'
 import { ipadTokens, Сontainer} from '/src/tokens/ipad-ui-tokens'
 
-export function Player() {
+export function Player({ className }) {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -75,7 +75,11 @@ export function Player() {
   }, []);
 
   return (
-    <Сontainer {...ipadTokens.widget.large} style={{ padding: 0 }}>
+    <Сontainer 
+      className={className} 
+      {...ipadTokens.widget.large} 
+      style={{ padding: 0 }}
+    >
       <div className={style.player__container}>
         <audio ref={audioRef} />
         <div className={style.vinyl_player}>

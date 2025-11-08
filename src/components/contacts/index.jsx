@@ -6,10 +6,11 @@ import { ipadTokens, Сontainer } from '/src/tokens/ipad-ui-tokens';
 
 const iconSize = { width: ipadTokens.icon.app.w, height: ipadTokens.icon.app.w };
 
-export function Contacts() {
+export function Contacts({ className }) {
   return (
-    <Сontainer 
-      {...ipadTokens.widget.medium} 
+    <Сontainer
+    className={className}
+    {...ipadTokens.widget.medium} 
       style= {{ backgroundColor: 'var(--pink)', gap: '30px' }}
       >
       <div className={style.icon_group}>

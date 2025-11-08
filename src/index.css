@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  justify-items: center;
   width: 100%;
   font-family: 'SF Pro', sans-serif;
   color: var(--dark-grey);

@@ -9,11 +9,11 @@ const iconSize = {
   borderRadius: ipadTokens.icon.app.br 
 };
 
-export function Dock() {
+export function Dock({ className }) {
   const [showFrame, setShowFrame] = useState(false);
 
   return (
-    <div className={style.dock__container}>
+    <div className={`${style.dock__container} ${className}`}>
       <button style={iconSize} className={style.dock__button} onClick={() => setShowFrame(true)}>
         <img src={projectIcons.slozhnoSosredotochitsya} alt="иконка сайта сложно сосредоточиться" />
       </button>
