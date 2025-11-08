@@ -18,6 +18,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -32,17 +33,7 @@ body {
   color: var(--dark-grey);
   background-color: var(--light-pink);
   background-image: radial-gradient(circle, var(--dark-pink), var(--light-pink));
-  height: 100%; /*TODO: убрать высоту */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+  height: 100vw; /*TODO: убрать высоту */
 }
 
 button,

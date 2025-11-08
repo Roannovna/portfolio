@@ -1,0 +1,31 @@
+.notions__header {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(var(--yellow), var(--orange));
+  position: relative;
+}
+
+.notions__header::after {
+  content: '';
+  border: 1px dashed var(--light-grey);
+  position: absolute;
+  top: 45px;
+  width: 100%;
+}
+
+.notions__body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0
+}
