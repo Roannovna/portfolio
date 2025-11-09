@@ -2,6 +2,7 @@ import style from './dock.module.css'
 import { projectIcons } from './project-icons/imp';
 import { useState } from 'react';
 import { ipadTokens } from '/src/tokens/ipad-ui-tokens';
+import { Iframe } from '../UI/iframe';
 
 const iconSize = { 
   width: ipadTokens.icon.spot.w, 
@@ -26,12 +27,7 @@ export function Dock({ className, style: extraStyle }) {
 
       </footer>
 
-      {frameSrc && (
-        <div className={style.dock__frame}>
-          <button className={style.dock__close} onClick={() => setFrameSrc(null)} />
-          <iframe src={frameSrc} />
-        </div>
-      )}
+      <Iframe open={!!frameSrc} src={frameSrc} onClose={() => setFrameSrc(null)} />
     </>
   )
 }
