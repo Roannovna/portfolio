@@ -21,6 +21,10 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -44,6 +48,8 @@ body {
   color: var(--dark-grey);
   background-color: var(--light-pink);
   background-image: radial-gradient(circle, var(--dark-pink), var(--light-pink));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100dvh;
 }
 
