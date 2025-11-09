@@ -4,40 +4,53 @@
 }
 
 .night-theme {
-  --background: #4327AE;
-  --dark-cloud: #281299;
-  --light-cloud: #8C77D6;
-  --sun: #E7DDF4;
-  --lower-mount: #004150;
-  --medium-mount: #003B54;
-  --upper-mount: #003B5B;
-  --water: #4F33BA;
-  --glare: #6A50CB;
+  --background: #404484ff;
+  --dark-cloud: #4F5490ff;
+  --light-cloud: #7881A8ff;
+  --sun: #f9efd8;
+  --upper-mount: #252B65ff;
+  --medium-mount: #191F59ff;
+  --lower-mount: #000640ff;
+  --water: #363F78ff;
+  --glare: #616998ff;
+}
+
+.sunrise-theme {
+  --background: #EDA691;
+  --dark-cloud: #C76E6D;
+  --light-cloud: #FCE09C;
+  --sun: #FCFBDB;
+  --upper-mount: #887283;
+  --medium-mount: #2e4060ff;
+  --lower-mount: #091b34ff;
+  --water: #5D79ACff;
+  --glare: #7494BCff;
 }
 
 .day-theme {
-  --background: #CD4970;
-  --dark-cloud: #B5305D;
-  --light-cloud: #FFA8A4;
-  --sun: #FFC9AF;
-  --upper-mount: #43045F;
-  --medium-mount: #4F0463;
-  --lower-mount: #5E0A6C;
-  --water: #DB577E;
-  --glare: #F0779A;
+  --background: #b4cdd9;
+  --dark-cloud: #E2DDCAff;
+  --light-cloud: #FDF6E4ff;
+  --sun: #fddfa3;
+  --upper-mount: #8e995b;
+  --medium-mount: #6c7c49;
+  --lower-mount: #536a55;
+  --water: #91C0C6ff;
+  --glare: #D8E4D3ff;
 }
 
-.transitional-theme {
-  --background: #EB9D63;
-  --dark-cloud: #D07B46;
-  --light-cloud: #FFEBAD;
-  --sun: #FBFFB7;
-  --upper-mount: #6D0F46;
-  --medium-mount: #710F3F;
-  --lower-mount: #7C1641;
-  --water: #FBAD73;
-  --glare: #FFBD8B;
+.sunset-theme {
+  --background: #e88c7dff;
+  --dark-cloud: #e56b6fff;
+  --light-cloud: #eaac8bff;
+  --sun: #eebba0ff;
+  --upper-mount: #6d597aff;
+  --medium-mount: #355070ff;
+  --lower-mount: #283c55ff;
+  --water: #915f78ff;
+  --glare: #b56576ff;
 }
+
 
 #background {
   fill: var(--background);

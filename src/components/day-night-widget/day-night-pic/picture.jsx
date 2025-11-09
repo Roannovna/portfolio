@@ -11,14 +11,14 @@ export function Picture() {
       case (hour >= 21 || hour < 6):
         return 'night-theme';
 
-      case (hour >= 6 && hour < 10):
-        return 'transitional-theme';
+      case (hour >= 6 && hour < 9):
+        return 'sunrise-theme';
 
-      case (hour >= 10 && hour < 16):
+      case (hour >= 9 && hour < 18):
         return 'day-theme';
 
-      case (hour >= 16 && hour < 21):
-        return 'transitional-theme';
+      case (hour >= 18 && hour < 21):
+        return 'sunset-theme';
 
       default:
         return 'transitional-theme';
