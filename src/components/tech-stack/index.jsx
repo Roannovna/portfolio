@@ -1,4 +1,3 @@
-import style from "./tech-stack.module.css";
 import { techStackIcons } from "./icons/imp";
 import { ipadTokens } from '/src/tokens/ipad-ui-tokens';
 

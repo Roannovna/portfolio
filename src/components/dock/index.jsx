@@ -10,34 +10,28 @@ const iconSize = {
 };
 
 export function Dock({ className, style: extraStyle }) {
-  const [showFrame, setShowFrame] = useState(false);
+  const [frameSrc, setFrameSrc] = useState(null);
 
   return (
-    <footer className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
-      <button style={iconSize} className={style.dock__button} onClick={() => setShowFrame(true)}>
-        <img src={projectIcons.slozhnoSosredotochitsya} alt="иконка сайта сложно сосредоточиться" />
-      </button>
-      {showFrame && (
+    <>
+      <footer className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
+
+        <button style={iconSize} className={style.dock__button} onClick={() => setFrameSrc('https://roannovna.github.io/slozhno-sosredotochitsya/')}>
+          <img src={projectIcons.slozhnoSosredotochitsya} alt="иконка сайта сложно сосредоточиться" />
+        </button>
+
+        <button style={iconSize} className={style.dock__button} onClick={() => setFrameSrc('https://roannovna.github.io/zakrivayuschiy-teg/')}>
+          <img src={projectIcons.zakrivayuschiyTeg} alt="иконка сайта закрывающий тег" />
+        </button>
+
+      </footer>
+
+      {frameSrc && (
         <div className={style.dock__frame}>
-          <button className={style.dock__close} onClick={() => setShowFrame(false)}></button>
-          <iframe
-            src='https://roannovna.github.io/slozhno-sosredotochitsya/' 
-            title="Сложно сосредоточиться"
-          />
+          <button className={style.dock__close} onClick={() => setFrameSrc(null)} />
+          <iframe src={frameSrc} />
         </div>
       )}
-      <button style={iconSize} className={style.dock__button} onClick={() => setShowFrame(true)}>
-        <img src={projectIcons.zakrivayuschiyTeg} alt="иконка сайта закрывающий тег" />
-      </button>
-      {showFrame && (
-        <div className={style.dock__frame}>
-          <button className={style.dock__close} onClick={() => setShowFrame(false)}></button>
-          <iframe
-            src='https://roannovna.github.io/zakrivayuschiy-teg/' 
-            title="Закрывающий тег"
-          />
-        </div>
-      )}
-    </footer>
+    </>
   )
 }
