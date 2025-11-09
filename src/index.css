@@ -21,6 +21,15 @@
   margin: 0;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100dvh;
+  width: 100%;
+}
+
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
@@ -36,7 +45,6 @@ body {
   background-color: var(--light-pink);
   background-image: radial-gradient(circle, var(--dark-pink), var(--light-pink));
   height: 100dvh;
-  position: relative;
 }
 
 button,

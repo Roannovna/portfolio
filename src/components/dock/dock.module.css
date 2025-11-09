@@ -10,6 +10,12 @@
   background-color: var(--white-opacity);
   padding: 7px;
   min-width: 154px;
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 20px;
+  z-index: 100;
 }
 
 .dock__button {

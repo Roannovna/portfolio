@@ -13,7 +13,7 @@ export function Dock({ className, style: extraStyle }) {
   const [showFrame, setShowFrame] = useState(false);
 
   return (
-    <div className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
+    <footer className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
       <button style={iconSize} className={style.dock__button} onClick={() => setShowFrame(true)}>
         <img src={projectIcons.slozhnoSosredotochitsya} alt="иконка сайта сложно сосредоточиться" />
       </button>
@@ -38,6 +38,6 @@ export function Dock({ className, style: extraStyle }) {
           />
         </div>
       )}
-    </div>
+    </footer>
   )
 }

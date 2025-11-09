@@ -3,12 +3,12 @@
   max-width: 1000px;
   padding: 20px;
   display: grid;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
   grid-auto-rows: max-content;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  position: relative;
+  grid-template-columns: repeat(auto-fill, 60px);
 }
 
 .home__clock {
@@ -39,11 +39,4 @@
 .home__calendar {
   grid-column: span 4 / span 4;
   grid-row: span 2 / span 2;
-}
-
-.home__dock {
-  position: sticky;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
 }
