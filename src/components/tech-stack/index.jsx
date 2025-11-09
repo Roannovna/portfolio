@@ -11,6 +11,7 @@ export function TechStack({ className }) {
       <img className={className} src={techStackIcons.htmlIcon} alt="HTML" style={{...iconSize, display: 'block'}} />
       <img className={className} src={techStackIcons.cssIcon} alt="CSS" style={{...iconSize, display: 'block'}} />
       <img className={className} src={techStackIcons.reactIcon} alt="React" style={{...iconSize, display: 'block'}} />
+      <img className={className} src={techStackIcons.muiIcon} alt="Material UI" style={{...iconSize, display: 'block'}} />
     </>
   )
 }
