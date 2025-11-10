@@ -25,7 +25,7 @@ export function BatteryLevel() {
       <div>{battery}%</div>
       <div className={style.battery__icon_container}>
         <div className={style.battery__icon_border}>
-          <div className={style.battery__icon_fill}></div>
+          <div className={style.battery__icon_fill} style={{width: `${battery}%`}}></div>
         </div>
         <div className={style.battery__icon_contact}></div>
       </div>
