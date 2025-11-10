@@ -1,0 +1,17 @@
+.status_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90dvw;
+  max-width: 1000px;
+  font-size: 16px;
+}
+
+.status_bar__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}

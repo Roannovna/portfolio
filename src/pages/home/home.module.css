@@ -1,11 +1,9 @@
 .home {
-  width: 90vw;
+  width: 90dvw;
   max-width: 1000px;
-  padding: 20px;
   display: grid;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
   grid-auto-rows: max-content;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fill, 60px);
