@@ -29,6 +29,11 @@
   border: none;
 }
 
+.dock__button:hover {
+  transform: var(--transform-hover);
+  transition: var(--transition-hover);
+}
+
 .dock__button img {
   object-fit: cover;
   overflow: hidden;

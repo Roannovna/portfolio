@@ -6,3 +6,8 @@
   gap: 5px;
   font-size: 13px;
 }
+
+.icon_group img:hover {
+  transform: var(--transform-hover);
+  transition: var(--transition-hover);
+}

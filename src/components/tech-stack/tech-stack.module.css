@@ -1,0 +1,8 @@
+.tech_stack__icon {
+  cursor: pointer;
+}
+
+.tech_stack__icon:hover {
+  transform: var(--transform-hover);
+  transition: var(--transition-hover);
+}

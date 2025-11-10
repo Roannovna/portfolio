@@ -12,6 +12,8 @@
   --white: rgb(255, 255, 255);
   --white-opacity: rgba(255, 255, 255, 0.55);
   --black: rgb(0, 0, 0);
+  --transform-hover: scale(1.1);
+  --transition-hover: transform 0.2s ease-in-out;
 }
 
 *,
