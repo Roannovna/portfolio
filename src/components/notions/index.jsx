@@ -1,9 +1,9 @@
-import { ipadTokens, Сontainer } from "../../tokens/ipad-ui-tokens.jsx";
+import { ipadTokens, Container } from "../../tokens/ipad-ui-tokens.jsx";
 import style from "./notions.module.css";
 
 export function Notions({ className }) {
   return (
-    <Сontainer 
+    <Container 
       className={className} 
       {...ipadTokens.widget.large} 
       style={{alignItems: "flex-start", 
@@ -20,6 +20,6 @@ export function Notions({ className }) {
         </ul>
         
       </div>
-    </Сontainer>
+    </Container>
   );
 }

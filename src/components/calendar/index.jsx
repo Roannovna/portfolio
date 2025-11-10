@@ -5,11 +5,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import 'dayjs/locale/ru';
 import { CalendarCovers } from './calendar-covers';
-import { ipadTokens, Сontainer } from '../../tokens/ipad-ui-tokens';
+import { ipadTokens, Container } from '../../tokens/ipad-ui-tokens';
 
 export function Calendar({ className }) {
   return (
-    <Сontainer 
+    <Container 
       className={className}
       {...ipadTokens.widget.medium} 
       style={{ gap: '10px', padding: '10px' }}
@@ -37,6 +37,6 @@ export function Calendar({ className }) {
       <div className={style.calendar__cover}>
         <CalendarCovers />
       </div>
-    </Сontainer>
+    </Container>
   );
 }

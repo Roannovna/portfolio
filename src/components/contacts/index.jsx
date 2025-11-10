@@ -2,13 +2,13 @@ import style from './contacts.module.css';
 import github from './icons/github.svg';
 import telegram from './icons/telegram.svg';
 import email from './icons/email.svg';
-import { ipadTokens, Сontainer } from '/src/tokens/ipad-ui-tokens';
+import { ipadTokens, Container } from '/src/tokens/ipad-ui-tokens';
 
 const iconSize = { width: ipadTokens.icon.app.w, height: ipadTokens.icon.app.w };
 
 export function Contacts({ className }) {
   return (
-    <Сontainer
+    <Container
     className={className}
     {...ipadTokens.widget.medium} 
       style= {{ backgroundColor: 'var(--pink)', gap: '30px' }}
@@ -25,6 +25,6 @@ export function Contacts({ className }) {
         <a href="mailto:roannovna@gmail.com"><img src={email} alt="email" style={iconSize}/></a>
         <p>Email</p>
       </div>
-    </Сontainer>
+    </Container>
   )
 }
