@@ -30,7 +30,7 @@ export function StatusBar() {
   }, []);
 
   return (
-    <div className={style.status_bar}>
+    <header className={style.status_bar}>
       <div className={style.status_bar__left}>
         <div className={style.status_bar__time}>{time}</div>
         <div className={style.status_bar__date}>{date}</div>
@@ -39,6 +39,6 @@ export function StatusBar() {
         <div className={style.status_bar__network}><NetworkStatus /></div>
         <div className={style.status_bar__battery}><BatteryLevel /></div>
       </div>
-    </div>
+    </header>
   )
 }
