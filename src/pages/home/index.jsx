@@ -5,14 +5,14 @@ import { Contacts } from "../../components/contacts";
 import { Player } from "../../components/player";
 import { DayNightWidget } from "../../components/day-night-widget";
 import { TechStack } from "../../components/tech-stack";
-import { Notions } from "../../components/notions";
+import { Notes } from "../../components/Notes";
 
 export function Home() {
   return (
     <>
       <main className={style.home}>
         <Clock className={style.home__clock} />
-        <Notions className={style.home__notions}/>
+        <Notes className={style.home__Notes}/>
         <Player className={style.home__player}/>
         <Contacts className={style.home__contacts}/>
         <DayNightWidget className={style.home__day_night_widget}/>
