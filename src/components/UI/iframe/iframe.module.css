@@ -1,6 +1,6 @@
 .frame__container {
   width: 95dvw;
-  height: 95dvh;
+  height: 80dvh;
   display: flex;
   justify-content: center;
   align-items: center;
