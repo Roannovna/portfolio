@@ -8,25 +8,35 @@
 }
 
 .battery__icon_container {
+  width: 36px;
+  height: 16px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 27px;
-  height: 11px;
+  gap: 1px;
 }
 
-.battery__icon_container img {
-  width: 36px;
+.battery__icon_border {
+  width: 32px;
   height: 16px;
-  position: absolute;
-  top: -2.5px;
-  left: -2.5px;
+  border-radius: 3px;
+  border: 1px solid var(--dark-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.battery__fill {
-  height: 100%;
+.battery__icon_fill {
+  width: 28px;
+  height: 12px;
   border-radius: 2px;
+  background-color: var(--dark-grey);
+}
+
+.battery__icon_contact {
+  width: 2px;
+  height: 5px;
+  border-radius: 0 100px 100px 0;
   background-color: var(--dark-grey);
 }

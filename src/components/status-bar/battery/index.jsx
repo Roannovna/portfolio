@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import bateryIcon from '/src/assets/battery-icon.svg'
 import style from './battery.module.css'
 
 export function BatteryLevel() {
@@ -25,8 +24,10 @@ export function BatteryLevel() {
     <div className={style.battery__container}>
       <div>{battery}%</div>
       <div className={style.battery__icon_container}>
-        <img src={bateryIcon} className={style.battery__icon} alt="batery-icon" />
-        <div className={style.battery__fill} style={{ width: `${battery}%` }}/>
+        <div className={style.battery__icon_border}>
+          <div className={style.battery__icon_fill}></div>
+        </div>
+        <div className={style.battery__icon_contact}></div>
       </div>
     </div>
   )
