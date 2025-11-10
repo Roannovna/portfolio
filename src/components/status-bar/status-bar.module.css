@@ -12,6 +12,14 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.status_bar__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
   gap: 8px;
 }

@@ -1,6 +1,7 @@
 import style from './status-bar.module.css'
 import { useEffect, useState } from 'react'
 import { BatteryLevel } from './battery/index.jsx'
+import { NetworkStatus } from './network/index.jsx'
 
 const formatTime = new Intl.DateTimeFormat('ru', {
   hour: 'numeric',
@@ -35,6 +36,7 @@ export function StatusBar() {
         <div className={style.status_bar__date}>{date}</div>
       </div>
       <div className={style.status_bar__right}>
+        <div className={style.status_bar__network}><NetworkStatus /></div>
         <div className={style.status_bar__battery}><BatteryLevel /></div>
       </div>
     </div>
