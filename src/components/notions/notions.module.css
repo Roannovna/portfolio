@@ -16,6 +16,7 @@
 .notions__body {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   padding: 15px;
   width: 100%;
   height: 100%;
@@ -23,9 +24,15 @@
 
 ul {
   display: flex;
+  gap: 5px;
   flex-direction: column;
   list-style-type: disc;
   list-style-position: inside;
   padding: 0;
   margin: 0
+}
+
+li {
+  margin: 0;
+  padding: 0;
 }
