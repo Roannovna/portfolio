@@ -1,75 +1,92 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
-import { Calendar, Flex, Radio, Select, theme, Typography } from 'antd';
-import dayLocaleData from 'dayjs/plugin/localeData';
-import { DatePicker } from 'antd';
 import ruRU from 'antd/es/date-picker/locale/ru_RU';
-
+import { Calendar } from 'antd';
+import dayLocaleData from 'dayjs/plugin/localeData';
 dayjs.extend(dayLocaleData);
+import { formatDateMonth } from '../../utils/formatDate.js';
+import { ipadTokens } from '../../tokens/ipad-ui-tokens';
+import { styled } from '@mui/material/styles';
+
+const StyledCalendar = styled(Calendar)({
+  fontFamily: "SF Pro",
+  fontSize: "8px",
+  color: "var(--dark-grey)",
+  width: "124px",
+  height: "min-content",
+  padding: "3px !important",
+  '& *': {
+    boxSizing: "border-box",
+    margin: "0px !important",
+    padding: "0px !important",
+    lineHeight: '1.66 !important',
+  },
+  '& .month': {
+    fontSize: "9px",
+    fontWeight: "bold",
+    lineHeight: "1.66",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    color: "var(--red)",
+    paddingLeft: "8px !important",
+  },
+  '& .ant-picker-panel, \
+  & .ant-picker-date-panel, \
+  & .ant-picker-body, \
+  & .ant-picker-content':{
+    width: '100% !important',
+    height: '100% !important',
+  },
+  '& .ant-picker-content *, *::before, & *::after': {
+    minWidth: "15px !important",
+    width: "15px !important",
+    minHeight: "15px !important",
+    height: "15px !important",
+  },
+  '& tr': {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: '2px',
+    margin: '1px 0px !important',
+  },
+  '& thead tr th': {
+    fontWeight: 'bold !important',
+  },
+  '& .ant-picker-calendar-date-today': {
+    background: "var(--red) !important",
+    color: "var(--white) !important",
+    borderRadius: "50% !important",
+    border: "none !important",
+    outline: "none !important",
+  },
+  '& .ant-picker-calendar-date-today::before': {
+    border: "none !important",
+    outline: "none !important",
+    borderRadius: "50% !important",
+  }
+});
+
 
 export function CalendarAntd({ className }) {
-  const { token } = theme.useToken();
-  const onPanelChange = (value, mode) => {
-    console.log(value.format('YYYY-MM-DD'), mode);
-  };
-  const wrapperStyle = {
-    width: 300,
-    height: 350,
-    border: `1px solid ${token.colorBorderSecondary}`,
-    borderRadius: token.borderRadiusLG,
-  };
+
+  // const wrapperStyle = {
+  //   width: 300,
+  //   height: 'fit-content',
+  //   borderRadius: ipadTokens.widget.small.br,
+  // };
+
   return (
-    <div style={wrapperStyle} className={className}>
-      <Calendar
+    <div className={className}>
+      <StyledCalendar
         locale={ruRU}
         fullscreen={false}
-        headerRender={({ value, type, onChange, onTypeChange }) => {
-          const year = value.year();
-          const month = value.month();
-          const yearOptions = Array.from({ length: 20 }, (_, i) => {
-            const label = year - 10 + i;
-            return { label, value: label };
-          });
-          const monthOptions = value
-            .localeData()
-            .monthsShort()
-            .map((label, index) => ({
-              label,
-              value: index,
-            }));
+        headerRender={({ value }) => {
+          const monthName = formatDateMonth.format(value);
           return (
-            <div style={{ padding: 8 }}>
-              <Typography.Title level={4}>Custom header</Typography.Title>
-              <Flex gap={8}>
-                <Radio.Group size="small" onChange={e => onTypeChange(e.target.value)} value={type}>
-                  <Radio.Button value="month">Month</Radio.Button>
-                  <Radio.Button value="year">Year</Radio.Button>
-                </Radio.Group>
-                <Select
-                  size="small"
-                  popupMatchSelectWidth={false}
-                  value={year}
-                  options={yearOptions}
-                  onChange={newYear => {
-                    const now = value.clone().year(newYear);
-                    onChange(now);
-                  }}
-                />
-                <Select
-                  size="small"
-                  popupMatchSelectWidth={false}
-                  value={month}
-                  options={monthOptions}
-                  onChange={newMonth => {
-                    const now = value.clone().month(newMonth);
-                    onChange(now);
-                  }}
-                />
-              </Flex>
-            </div>
+            <div className='month'>{monthName}</div>
           );
         }}
-        onPanelChange={onPanelChange}
       />
     </div>
   );
