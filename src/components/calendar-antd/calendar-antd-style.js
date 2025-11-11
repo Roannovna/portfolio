@@ -3,11 +3,11 @@ import { styled } from "@mui/material/styles";
 
 export const StyledCalendar = styled(Calendar)({
   fontFamily: "SF Pro",
-  fontSize: "8.5px",
+  fontSize: "8px",
   color: "var(--dark-grey)",
-  width: "130px",
+  width: "135px",
   height: "min-content",
-  padding: "0px !important",
+  padding: "0px 6px !important",
   "& *": {
     boxSizing: "border-box",
     margin: "0px !important",
@@ -15,9 +15,9 @@ export const StyledCalendar = styled(Calendar)({
     lineHeight: "1.9 !important",
   },
   "& .month": {
-    fontSize: "9.5px",
+    fontSize: "9px",
     fontWeight: "bold",
-    lineHeight: "1.66",
+    lineHeight: "1.5",
     letterSpacing: "0.08em",
     textTransform: "uppercase",
     color: "var(--red)",
@@ -31,10 +31,10 @@ export const StyledCalendar = styled(Calendar)({
     height: "100% !important",
   },
   "& .ant-picker-content *, *::before, & *::after": {
-    minWidth: "16px !important",
-    width: "16px !important",
-    minHeight: "16px !important",
-    height: "16px !important",
+    minWidth: "15px !important",
+    width: "15px !important",
+    minHeight: "15px !important",
+    height: "15px !important",
     textAlign: "center !important",
     textJustify: "center !important",
   },
@@ -43,7 +43,8 @@ export const StyledCalendar = styled(Calendar)({
     flexDirection: "row",
     justifyContent: "space-between",
     gap: "3px",
-    margin: "1px 0px !important",
+    // margin: "1px 0px !important",
+    width: "fit-content !important",
   },
   "& thead tr th": {
     fontWeight: "bold !important",

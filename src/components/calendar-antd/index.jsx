@@ -6,10 +6,9 @@ dayjs.extend(dayLocaleData);
 import { formatDateMonth } from '../../utils/formatDate.js';
 import { StyledCalendar } from './calendar-antd-style.js';
 
-export function CalendarAntd({ className }) {
-
+export function CalendarAntd() {
   return (
-    <div className={className}>
+    <div>
       <StyledCalendar
         locale={ruRU}
         fullscreen={false}
