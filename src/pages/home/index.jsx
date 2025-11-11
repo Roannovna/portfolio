@@ -6,6 +6,7 @@ import { Player } from "../../components/player";
 import { DayNightWidget } from "../../components/day-night-widget";
 import { TechStack } from "../../components/tech-stack";
 import { Notes } from "../../components/Notes";
+import { CalendarAntd } from "../../components/calendar-antd";
 
 export function Home() {
   return (
@@ -17,7 +18,8 @@ export function Home() {
         <Contacts className={style.home__contacts}/>
         <DayNightWidget className={style.home__day_night_widget}/>
         <Calendar className={style.home__calendar}/>
-        <TechStack />
+        <CalendarAntd className={style.home__calendar_antd}/>
+        <TechStack className={style.home__tech_stack}/>
       </main>
     </>
   );
