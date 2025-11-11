@@ -1,6 +1,6 @@
 import { CalendarCovers } from './calendar-covers';
 import { ipadTokens, Container } from '../../tokens/ipad-ui-tokens';
-import { CalendarAntd } from '../calendar-antd';
+import { CalendarAntd } from './calendar-antd/index.jsx';
 
 export function Calendar({ className }) {
   return (

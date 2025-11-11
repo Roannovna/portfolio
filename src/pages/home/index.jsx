@@ -6,7 +6,6 @@ import { Player } from "../../components/player";
 import { DayNightWidget } from "../../components/day-night-widget";
 import { TechStack } from "../../components/tech-stack";
 import { Notes } from "../../components/Notes";
-import { CalendarAntd } from "../../components/calendar-antd";
 
 export function Home() {
   return (
