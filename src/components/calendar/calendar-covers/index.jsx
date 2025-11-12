@@ -39,5 +39,9 @@ export function CalendarCovers() {
       break;
   }
 
-  return <img src={src} alt={alt} className={style.calendar_cover__image}/>;
+  return (
+    <div className={style.calendar__cover}>
+      <img src={src} alt={alt} className={style.calendar_cover__image}/>
+    </div>
+)
 }

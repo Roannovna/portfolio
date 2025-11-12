@@ -17,7 +17,7 @@ export function Home() {
         <Contacts className={style.home__contacts}/>
         <DayNightWidget className={style.home__day_night_widget}/>
         <Calendar className={style.home__calendar}/>
-        <TechStack />
+        <TechStack className={style.home__tech_stack}/>
       </main>
     </>
   );
