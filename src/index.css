@@ -27,6 +27,14 @@
   width: 0;
 }
 
+.ant-tour {
+  z-index: 9999 !important;
+}
+
+.ant-tour-mask {
+  z-index: 9998 !important;
+}
+
 #root {
   display: flex;
   flex-direction: column;
