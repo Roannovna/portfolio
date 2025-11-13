@@ -1,6 +1,6 @@
 import { techStackIcons } from "./icons/imp";
-import { ipadTokens } from '../../tokens/ipad-ui-tokens.jsx';
-import { Iframe } from '../UI/iframe';
+import { ipadTokens } from '@/tokens/ipad-ui-tokens.jsx';
+import { Iframe } from '@/components/UI/iframe';
 import { useState } from 'react';
 import style from './tech-stack.module.css'
 

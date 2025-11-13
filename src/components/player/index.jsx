@@ -3,7 +3,7 @@ import { btns } from './vinyl-player/imp'
 import { TRACKS } from './tracks-data/tracks-data'
 import def_label from './disc-label/roannovna.png'
 import { useState, useRef, useEffect } from 'react'
-import { ipadTokens, Container } from '../../tokens/ipad-ui-tokens.jsx'
+import { ipadTokens, Container } from '@/tokens/ipad-ui-tokens.jsx'
 
 export function Player({ id, className }) {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);

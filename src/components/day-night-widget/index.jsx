@@ -1,5 +1,5 @@
 import { Picture } from './day-night-pic/picture.jsx';
-import { ipadTokens, Container } from '../../tokens/ipad-ui-tokens.jsx';
+import { ipadTokens, Container } from '@/tokens/ipad-ui-tokens.jsx';
 
 
 export function DayNightWidget({ id, className }) {

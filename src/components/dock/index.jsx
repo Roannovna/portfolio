@@ -1,10 +1,10 @@
 import style from './dock.module.css'
 import { projectIcons } from './project-icons/imp';
 import { useState } from 'react';
-import { ipadTokens } from '../../tokens/ipad-ui-tokens.jsx';
-import { Iframe } from '../UI/iframe';
-import { tourCastomIcons } from '../../assets/tour/imp';
-import { CustomBtn } from '../UI/tour/custom-btn.js';
+import { ipadTokens } from '@/tokens/ipad-ui-tokens.jsx';
+import { Iframe } from '@/components/UI/iframe';
+import { tourCastomIcons } from '@/assets/tour/imp';
+import { CustomBtn } from '@/components/UI/tour/custom-btn.js';
 
 const iconSize = { 
   width: ipadTokens.icon.spot.w, 

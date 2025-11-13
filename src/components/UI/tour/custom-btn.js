@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import styled from "styled-components";
-import { ipadTokens } from "../../../tokens/ipad-ui-tokens.jsx";
+import { ipadTokens } from "@/tokens/ipad-ui-tokens.jsx";
 
 export const CustomBtn = styled(Button)`
   background: var(--white);

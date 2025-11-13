@@ -2,8 +2,8 @@ import style from './status-bar.module.css'
 import { useEffect, useState } from 'react'
 import { BatteryLevel } from './battery/index.jsx'
 import { NetworkStatus } from './network/index.jsx'
-import { formatDate } from '../../utils/formatDate.js'
-import { formatTime } from '../../utils/formatTime.js'
+import { formatDate } from '@/utils/formatDate.js'
+import { formatTime } from '@/utils/formatTime.js'
 
 export function StatusBar({ id }) {
   const [time, setTime] = useState();

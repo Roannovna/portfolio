@@ -1,5 +1,5 @@
 import { Tour } from 'antd';
-import { tourCastomIcons } from '../../../assets/tour/imp';
+import { tourCastomIcons } from '@/assets/tour/imp';
 
 
 export function TourAntd({ open, onClose }) {
