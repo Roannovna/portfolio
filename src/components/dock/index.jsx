@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ipadTokens } from '/src/tokens/ipad-ui-tokens';
 import { Iframe } from '../UI/iframe';
 import { Button } from 'antd';
-import tourBtn from '/src/assets/tour-btn.svg';
+import { tourCastumIcons } from '../../assets/tour/imp';
 
 const iconSize = { 
   width: ipadTokens.icon.spot.w, 
@@ -12,15 +12,15 @@ const iconSize = {
   borderRadius: ipadTokens.icon.spot.br 
 };
 
-export function Dock({ className, style: extraStyle, onOpenTour }) {
+export function Dock({ id, className, style: extraStyle, onOpenTour }) {
   const [frameSrc, setFrameSrc] = useState(null);
 
   return (
     <>
-      <footer className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
+      <footer  id={id} className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
 
         <Button type="primary" onClick={onOpenTour}>
-          <img src={tourBtn} style={iconSize} alt="иконка тура" />
+          <img src={tourCastumIcons.tourBtn} style={iconSize} alt="иконка тура" />
         </Button>
 
         <button style={iconSize} className={style.dock__button} onClick={() => setFrameSrc('https://roannovna.github.io/slozhno-sosredotochitsya/')}>

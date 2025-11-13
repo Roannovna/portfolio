@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { StatusBar } from "./components/status-bar/index.jsx";
 import { Home } from "./pages/home/index.jsx";
 import { Dock } from "./components/dock/index.jsx";
@@ -12,9 +11,10 @@ function App() {
   return (
     <>
     <TourAntd open={tourOpen} onClose={() => setTourOpen(false)} />
-    <StatusBar />
+    <StatusBar id="status-bar"/>
     <Home />
     <Dock 
+      id="dock"
       style={{marginTop: ipadTokens.spacing.uniGap}}
       onOpenTour={() => setTourOpen(true)}
       />
