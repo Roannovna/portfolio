@@ -1,5 +1,5 @@
 import { Tour } from 'antd';
-import { tourCastumIcons } from '../../../assets/tour/imp';
+import { tourCastomIcons } from '../../../assets/tour/imp';
 
 
 export function TourAntd({ open, onClose }) {
@@ -12,8 +12,8 @@ export function TourAntd({ open, onClose }) {
           Этот тур познакомит вас с компонентами и функционалом моего сайта.
           <br />
           <br />Сам тур основан на компоненте Tour из библиотеки Ant Design и полностью кастомизирован под мой дизайн.
-          <br /><br />Нажимайте {''} <img src={tourCastumIcons.arrowNext} /> чтобы продолжить и {''} <img src={tourCastumIcons.arrowPrev} /> чтобы вернуться назад.
-          <br />Чтобы завершить тур в любой момент, нажмите на кнопку {''} <img src={tourCastumIcons.closeBtn} /> в правом верхнем углу.
+          <br /><br />Нажимайте {''} <img src={tourCastomIcons.arrowNext} /> чтобы продолжить и {''} <img src={tourCastomIcons.arrowPrev} /> чтобы вернуться назад.
+          <br />Чтобы завершить тур в любой момент, нажмите на кнопку {''} <img src={tourCastomIcons.closeBtn} /> в правом верхнем углу.
         </>
       ),
       placement: 'center',

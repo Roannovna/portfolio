@@ -4,7 +4,7 @@ import arrowPrev from "./arrow-prev.svg";
 import closeBtn from "./close-btn.svg";
 import arrow from "./arrow.svg";
 
-export const tourCastumIcons = {
+export const tourCastomIcons = {
   tourBtn,
   arrowNext,
   arrowPrev,
