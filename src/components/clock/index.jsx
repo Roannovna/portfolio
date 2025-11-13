@@ -1,6 +1,6 @@
 import style from './clock.module.css';
 import { useEffect, useState } from 'react';
-import { ipadTokens, Container } from '/src/tokens/ipad-ui-tokens';
+import { ipadTokens, Container } from '../../tokens/ipad-ui-tokens.jsx';
 
 const colors = [
   "rgba(207, 151, 153, 0.6)", 
