@@ -1,5 +1,6 @@
 import { Tour } from 'antd';
 import { tourCastomIcons } from '@/assets/tour/imp';
+import { ipadTokens } from '@/tokens/ipad-ui-tokens';
 
 export function TourAntd({ open, onClose }) {
 
@@ -128,11 +129,15 @@ export function TourAntd({ open, onClose }) {
     },
   }));
 
+  const customOffset = ipadTokens.widget.medium.br;
+  const customRadius = ipadTokens.widget.medium.br;
+
   return (
     <Tour
       open={open}
       onClose={onClose}
       steps={stepsWithIcons}
+      gap={{ offset: customOffset, radius: customRadius }}
       rootClassName="custom-tour"
       getPopupContainer={() => document.body}
       mask
