@@ -1,6 +1,5 @@
-// import { Tour } from 'antd';
+import { Tour } from 'antd';
 import { tourCastomIcons } from '@/assets/tour/imp';
-import { CustomTour } from './custom-tour.jsx';
 
 export function TourAntd({ open, onClose }) {
 
@@ -76,7 +75,7 @@ export function TourAntd({ open, onClose }) {
           <br />Картинка нарисована лично в Figma; смена цветов реализована при помощи СSS, JS и React.
         </>
       ),
-      placement: 'right',
+      placement: 'topRight',
       target: () => document.querySelector('#day-night-widget'),
     },
     {
@@ -130,14 +129,15 @@ export function TourAntd({ open, onClose }) {
   }));
 
   return (
-    <CustomTour
-        open={open}
-        onClose={onClose}
-        steps={stepsWithIcons}
-        rootClassName="custom-tour"
-        getPopupContainer={() => document.body}
-        mask
-        placement="rightBottom"
-      />
+    <Tour
+      open={open}
+      onClose={onClose}
+      steps={stepsWithIcons}
+      rootClassName="custom-tour"
+      getPopupContainer={() => document.body}
+      mask
+      placement="rightBottom"
+      closeIcon={<img src={tourCastomIcons.closeBtn} alt="close" />}
+    />
   );
 };

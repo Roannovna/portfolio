@@ -27,39 +27,6 @@
   width: 0;
 }
 
-.ant-tour {
-  z-index: 9999 !important;
-}
-
-.ant-tour-mask {
-  z-index: 9998 !important;
-}
-
-.custom-tour .ant-tour-footer .ant-btn,
-.custom-tour .ant-tour-prev-btn,
-.custom-tour .ant-tour-next-btn,
-.custom-tour .ant-btn-variant-solid,
-.custom-tour .ant-btn-color-primary {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: transparent !important;
-  padding: 0 !important;
-}
-
-.custom-tour .ant-tour-footer .ant-btn:hover,
-.custom-tour .ant-tour-footer .ant-btn:focus {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: transparent !important;
-}
-
-.custom-tour .ant-tour-footer .ant-btn:hover {
-  transform: var(--transform-hover);
-  transition: var(--transition-hover);
-}
-
 #root {
   display: flex;
   flex-direction: column;
@@ -94,4 +61,53 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.ant-tour {
+  z-index: 9999 !important;
+}
+
+.ant-tour-mask {
+  z-index: 9998 !important;
+}
+
+.custom-tour .ant-tour-footer .ant-btn,
+.custom-tour .ant-tour-prev-btn,
+.custom-tour .ant-tour-next-btn,
+.custom-tour .ant-btn-variant-solid,
+.custom-tour .ant-btn-color-primary {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: transparent !important;
+  padding: 0 !important;
+}
+
+.custom-tour .ant-tour-footer .ant-btn:hover,
+.custom-tour .ant-tour-footer .ant-btn:focus {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: transparent !important;
+}
+
+.custom-tour .ant-tour-footer .ant-btn:hover {
+  transform: var(--transform-hover);
+  transition: var(--transition-hover);
+}
+
+.custom-tour .ant-tour-close {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.custom-tour .ant-tour-close:hover,
+.custom-tour .ant-tour-close:focus {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: var(--transform-hover);
+  transition: var(--transition-hover);
 }
