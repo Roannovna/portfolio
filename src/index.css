@@ -70,7 +70,7 @@ a {
 }
 
 .ant-tour-title {
-  letter-spacing: 0.13rem !important;
+  letter-spacing: 0.11rem !important;
   font-size: 16px !important;
 }
 
@@ -125,4 +125,28 @@ a {
 
 .ant-tour-indicator-active {
   background: var(--dark-pink) !important;
+}
+
+.ant-tour-footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ant-tour-indicators {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 !important;
+}
+
+.ant-tour-prev-btn {
+  position: absolute;
+  left: 0;
+}
+
+.ant-tour-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
