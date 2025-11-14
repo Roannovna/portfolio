@@ -65,6 +65,13 @@ a {
 
 .ant-tour {
   z-index: 9999 !important;
+  font-family: "Rounded", sans-serif !important;
+  color: var(--dark-grey) !important;
+}
+
+.ant-tour-title {
+  letter-spacing: 0.13rem !important;
+  font-size: 16px !important;
 }
 
 .ant-tour-mask {
