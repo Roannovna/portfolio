@@ -71,11 +71,11 @@ a {
   z-index: 9998 !important;
 }
 
-.custom-tour .ant-tour-footer .ant-btn,
-.custom-tour .ant-tour-prev-btn,
-.custom-tour .ant-tour-next-btn,
-.custom-tour .ant-btn-variant-solid,
-.custom-tour .ant-btn-color-primary {
+.ant-tour-footer .ant-btn,
+.ant-tour-prev-btn,
+.ant-tour-next-btn,
+.ant-btn-variant-solid,
+.ant-btn-color-primary {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
@@ -83,31 +83,39 @@ a {
   padding: 0 !important;
 }
 
-.custom-tour .ant-tour-footer .ant-btn:hover,
-.custom-tour .ant-tour-footer .ant-btn:focus {
+.ant-tour-footer .ant-btn:hover,
+.ant-tour-footer .ant-btn:focus {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   color: transparent !important;
 }
 
-.custom-tour .ant-tour-footer .ant-btn:hover {
+.ant-tour-footer .ant-btn:hover {
   transform: var(--transform-hover);
   transition: var(--transition-hover);
 }
 
-.custom-tour .ant-tour-close {
+.ant-tour-close {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
 }
 
-.custom-tour .ant-tour-close:hover,
-.custom-tour .ant-tour-close:focus {
+.ant-tour-close:hover,
+.ant-tour-close:focus {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   transform: var(--transform-hover);
   transition: var(--transition-hover);
+}
+
+.ant-tour-indicator {
+  background: var(--light-grey) !important;
+}
+
+.ant-tour-indicator-active {
+  background: var(--dark-pink) !important;
 }
