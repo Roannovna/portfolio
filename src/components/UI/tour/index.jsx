@@ -1,6 +1,6 @@
-import { Tour } from 'antd';
+// import { Tour } from 'antd';
 import { tourCastomIcons } from '@/assets/tour/imp';
-
+import { CustomTour } from './custom-tour.jsx';
 
 export function TourAntd({ open, onClose }) {
 
@@ -119,11 +119,22 @@ export function TourAntd({ open, onClose }) {
     },
   ];
 
+  const stepsWithIcons = steps.map((step) => ({
+    ...step,
+    nextButtonProps: {
+      children: <img src={tourCastomIcons.arrowNext} alt="next" />,
+    },
+    prevButtonProps: {
+      children: <img src={tourCastomIcons.arrowPrev} alt="prev" />,
+    },
+  }));
+
   return (
-      <Tour
+    <CustomTour
         open={open}
         onClose={onClose}
-        steps={steps}
+        steps={stepsWithIcons}
+        rootClassName="custom-tour"
         getPopupContainer={() => document.body}
         mask
         placement="rightBottom"
