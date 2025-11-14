@@ -41,7 +41,7 @@ export function TourAntd({ open, onClose }) {
           <br />Часы созданы лично мной без использования сторонних UI библиотек.
       </>
       ),
-      placement: 'bottomRight',
+      placement: 'bottom',
       target: () => document.querySelector('#clock-standby'),
     },
     {
@@ -59,13 +59,13 @@ export function TourAntd({ open, onClose }) {
           <br />Воспроизведение музыки реализовано без помощи сторонних UI библиотек.
         </>
       ),
-      placement: 'leftBottom',
+      placement: 'left',
       target: () => document.querySelector('#vinyl-player'),
     },
     {
       title: 'Контакты',
       description: 'Блок со ссылками на мои контакты.',
-      placement: 'rightBottom',
+      placement: 'right',
       target: () => document.querySelector('#contacts'),
     },
     {
@@ -76,7 +76,7 @@ export function TourAntd({ open, onClose }) {
           <br />Картинка нарисована лично в Figma; смена цветов реализована при помощи СSS, JS и React.
         </>
       ),
-      placement: 'topRight',
+      placement: 'top',
       target: () => document.querySelector('#day-night-widget'),
     },
     {
@@ -89,7 +89,7 @@ export function TourAntd({ open, onClose }) {
           <br />Компонент календаря взят из библиотеки Ant Design и был полностью стилизован под концепцию сайта.
         </>
       ),
-      placement: 'rightTop',
+      placement: 'right',
       target: () => document.querySelector('#calendar'),
     },
     {
@@ -102,7 +102,7 @@ export function TourAntd({ open, onClose }) {
           <br />При нажатии на иконку открывается frame с сайтом технологии или разделом в Дока.
         </>
       ),
-      placement: 'leftBottom',
+      placement: 'left',
       target: () => document.querySelector('#tech-stack'),
     },
     {

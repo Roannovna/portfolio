@@ -71,6 +71,7 @@ a {
 
 .ant-tour-inner {
   border-radius: 20px !important;
+  overflow: visible !important;
 }
 
 .ant-tour-title {
@@ -80,6 +81,11 @@ a {
 
 .ant-tour-mask {
   z-index: 9998 !important;
+}
+
+.ant-tour-content {
+  margin: 50px !important;
+  position: relative;
 }
 
 .ant-tour-footer .ant-btn,
@@ -153,4 +159,69 @@ a {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+}
+
+/* BOTTOM */
+.ant-tour-placement-bottom .ant-tour-content::after,
+.ant-tour-placement-bottomLeft .ant-tour-content::after,
+.ant-tour-placement-bottomRight .ant-tour-content::after {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: url('./assets/tour/arrow-top.svg') no-repeat center / contain;
+  pointer-events: none;
+}
+
+/* TOP */
+.ant-tour-placement-top .ant-tour-content::after,
+.ant-tour-placement-topLeft .ant-tour-content::after,
+.ant-tour-placement-topRight .ant-tour-content::after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: url('./assets/tour/arrow-bottom.svg') no-repeat center / contain;
+  pointer-events: none;
+}
+
+/* LEFT */
+.ant-tour-placement-left .ant-tour-content::after,
+.ant-tour-placement-leftTop .ant-tour-content::after,
+.ant-tour-placement-leftBottom .ant-tour-content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: url('./assets/tour/arrow-right.svg') no-repeat center / contain;
+  pointer-events: none;
+}
+
+/* RIGHT */
+.ant-tour-placement-right .ant-tour-content::after,
+.ant-tour-placement-rightTop .ant-tour-content::after,
+.ant-tour-placement-rightBottom .ant-tour-content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: url('./assets/tour/arrow-left.svg') no-repeat center / contain;
+  pointer-events: none;
+}
+
+.ant-tour-arrow,
+.ant-popover-arrow {
+  display: none !important;
 }
