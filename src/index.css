@@ -129,14 +129,6 @@ a {
   transition: var(--transition-hover);
 }
 
-.ant-tour-indicator {
-  background: var(--light-grey) !important;
-}
-
-.ant-tour-indicator-active {
-  background: var(--dark-pink) !important;
-}
-
 .ant-tour-footer {
   position: relative;
   display: flex;
