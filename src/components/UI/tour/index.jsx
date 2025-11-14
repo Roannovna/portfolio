@@ -3,7 +3,6 @@ import { tourCastomIcons } from '@/assets/tour/imp';
 import { ipadTokens } from '@/tokens/ipad-ui-tokens';
 
 export function TourAntd({ open, onClose }) {
-
   const steps = [
     {
       title: 'Добро пожаловать в тур по сайту!🧭🐜',
@@ -129,8 +128,8 @@ export function TourAntd({ open, onClose }) {
     },
   }));
 
-  const customOffset = ipadTokens.widget.medium.br;
-  const customRadius = ipadTokens.widget.medium.br;
+  const customOffset = ipadTokens.spacing.uniGap;
+  const customRadius = ipadTokens.widget.medium.br + customOffset;
 
   return (
     <Tour

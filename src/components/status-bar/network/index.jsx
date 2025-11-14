@@ -22,7 +22,7 @@ export function NetworkStatus() {
     <div className='network_status'>
       {isOnline ? 
         <div><img src={online} style={{height: '16px'}} alt="online" /></div> : 
-        <div><img src={offline} alt="offline" /></div>
+        <div><img src={offline} style={{height: '16px'}} alt="offline" /></div>
       }
     </div>
   )
