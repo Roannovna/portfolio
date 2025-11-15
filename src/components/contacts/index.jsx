@@ -2,13 +2,14 @@ import style from './contacts.module.css';
 import github from './icons/github.svg';
 import telegram from './icons/telegram.svg';
 import email from './icons/email.svg';
-import { ipadTokens, Container } from '/src/tokens/ipad-ui-tokens';
+import { ipadTokens, Container } from '@/tokens/ipad-ui-tokens.jsx';
 
 const iconSize = { width: ipadTokens.icon.app.w, height: ipadTokens.icon.app.w };
 
-export function Contacts({ className }) {
+export function Contacts({ id, className }) {
   return (
     <Container
+    id={id}
     className={className}
     {...ipadTokens.widget.medium} 
       style= {{ backgroundColor: 'var(--pink)', gap: '30px' }}
