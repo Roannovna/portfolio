@@ -1,5 +1,5 @@
 import style from './dock.module.css'
-import { projectIcons } from './project-icons/imp';
+import { projectIcons } from '@/assets/project-icons/imp';
 import { useState } from 'react';
 import { ipadTokens } from '@/tokens/ipad-ui-tokens.jsx';
 import { Iframe } from '@/components/UI/iframe';

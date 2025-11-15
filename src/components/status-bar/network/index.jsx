@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import online from '@/assets/online.svg'
-import offline from '@/assets/offline.svg'
+import online from '@/assets/status-bar/online.svg'
+import offline from '@/assets/status-bar/offline.svg'
 
 export function NetworkStatus() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
