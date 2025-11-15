@@ -2,10 +2,19 @@ import style from './status-bar.module.css'
 import { useEffect, useState } from 'react'
 import { BatteryLevel } from './battery/index.jsx'
 import { NetworkStatus } from './network/index.jsx'
-import { formatDate } from '@/utils/formatDate.js'
-import { formatTime } from '@/utils/formatTime.js'
 
-export function StatusBar({ id }) {
+const formatTime = new Intl.DateTimeFormat('ru', {
+  hour: 'numeric',
+  minute: '2-digit',
+});
+
+const formatDate = new Intl.DateTimeFormat('ru', {
+  weekday: 'short',
+  day: 'numeric',
+  month: 'short',
+});
+
+export function StatusBar() {
   const [time, setTime] = useState();
   const [date, setDate] = useState();
 
@@ -21,7 +30,7 @@ export function StatusBar({ id }) {
   }, []);
 
   return (
-    <header id={id} className={style.status_bar}>
+    <header className={style.status_bar}>
       <div className={style.status_bar__left}>
         <div className={style.status_bar__time}>{time}</div>
         <div className={style.status_bar__date}>{date}</div>
