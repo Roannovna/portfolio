@@ -18,6 +18,7 @@ export function TechStack({ id, className }) {
       <img id={id} className={`${style.tech_stack__icon} ${className}`} src={techStackIcons.cssIcon} onClick={() => setFrameSrc('https://doka.guide/css')} alt="CSS" style={iconSize} />
       <img id={id} className={`${style.tech_stack__icon} ${className}`} src={techStackIcons.reactIcon} onClick={() => setFrameSrc('https://react.dev/')} alt="React" style={iconSize} />
       <img id={id} className={`${style.tech_stack__icon} ${className}`} src={techStackIcons.muiIcon} onClick={() => setFrameSrc('https://mui.com/')} alt="Material UI" style={iconSize} />
+      <img id={id} className={`${style.tech_stack__icon} ${className}`} src={techStackIcons.antdIcon} onClick={() => setFrameSrc('https://ant.design/')} alt="Ant Design" style={iconSize} />
 
       <Iframe open={!!frameSrc} src={frameSrc} onClose={() => setFrameSrc(null)} />
     </>
