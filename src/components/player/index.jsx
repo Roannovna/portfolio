@@ -1,11 +1,11 @@
 import style from './player.module.css'
-import { btns } from './vinyl-player/imp'
+import { btns } from '@/assets/player/vinyl-player/imp'
 import { TRACKS } from './tracks-data/tracks-data'
-import def_label from './disc-label/roannovna.png'
+import def_label from '@/assets/player/disc-label/roannovna.png'
 import { useState, useRef, useEffect } from 'react'
-import { ipadTokens, Container } from '/src/tokens/ipad-ui-tokens'
+import { ipadTokens, Container } from '@/tokens/ipad-ui-tokens.jsx'
 
-export function Player({ className }) {
+export function Player({ id, className }) {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -29,6 +29,7 @@ export function Player({ className }) {
 
   return (
     <Container 
+      id={id}
       className={className} 
       {...ipadTokens.widget.large} 
       style={{ padding: 0 }}
