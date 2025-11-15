@@ -1,7 +1,7 @@
 import style from './player.module.css'
-import { btns } from './vinyl-player/imp'
+import { btns } from '@/assets/player/vinyl-player/imp'
 import { TRACKS } from './tracks-data/tracks-data'
-import def_label from './disc-label/roannovna.png'
+import def_label from '@/assets/player/disc-label/roannovna.png'
 import { useState, useRef, useEffect } from 'react'
 import { ipadTokens, Container } from '@/tokens/ipad-ui-tokens.jsx'
 

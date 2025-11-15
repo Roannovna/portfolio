@@ -1,4 +1,4 @@
-import { techStackIcons } from "./icons/imp";
+import { techStackIcons } from "@/assets/tech-stack-icons/imp";
 import { ipadTokens } from '@/tokens/ipad-ui-tokens.jsx';
 import { Iframe } from '@/components/UI/iframe';
 import { useState } from 'react';
