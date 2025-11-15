@@ -24,7 +24,6 @@ export const Container = ({ w, h, br, style: extraStyle, children, ...props }) =
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: "20px",
         backgroundColor: "var(--white)",
         overflow: "clip",
         overflowClipMargin: "content-box",

@@ -1,5 +1,5 @@
 import { ipadTokens, Container } from "@/tokens/ipad-ui-tokens.jsx";
-import style from "./Notes.module.css";
+import style from "./notes.module.css";
 
 export function Notes({ id, className }) {
   return (
@@ -10,7 +10,6 @@ export function Notes({ id, className }) {
       style={{alignItems: "flex-start", 
               flexDirection: "column", 
               justifyContent: "flex-start", 
-              alignItems: "flex-start",
               gap: "10px"}}>
       <div className={style.Notes__header} />
       <div className={style.Notes__body}>
