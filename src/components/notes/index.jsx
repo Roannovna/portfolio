@@ -1,5 +1,5 @@
 import { ipadTokens, Container } from "@/tokens/ipad-ui-tokens.jsx";
-import style from "./Notes.module.css";
+import style from "./notes.module.css";
 
 export function Notes({ id, className }) {
   return (

@@ -5,7 +5,7 @@ import { Contacts } from "@/components/contacts";
 import { Player } from "@/components/player";
 import { DayNightWidget } from "@/components/day-night-widget";
 import { TechStack } from "@/components/tech-stack";
-import { Notes } from "@/components/Notes";
+import { Notes } from "@/components/notes";
 
 export function Home() {
   return (
