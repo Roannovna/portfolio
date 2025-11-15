@@ -1,0 +1,132 @@
+#pic {
+  transition: all 10s ease-in-out;
+}
+
+.night-theme {
+  --background: #404484ff;
+  --dark-cloud: #4F5490ff;
+  --light-cloud: #7881A8ff;
+  --sun: #f9efd8;
+  --upper-mount: #252B65ff;
+  --medium-mount: #191F59ff;
+  --lower-mount: #000640ff;
+  --water: #363F78ff;
+  --glare: #616998ff;
+}
+
+.sunrise-theme {
+  --background: #EDA691;
+  --dark-cloud: #C76E6D;
+  --light-cloud: #FCE09C;
+  --sun: #FCFBDB;
+  --upper-mount: #887283;
+  --medium-mount: #2e4060ff;
+  --lower-mount: #091b34ff;
+  --water: #5D79ACff;
+  --glare: #7494BCff;
+}
+
+.day-theme {
+  --background: #b4cdd9;
+  --dark-cloud: #E2DDCAff;
+  --light-cloud: #FDF6E4ff;
+  --sun: #fddfa3;
+  --upper-mount: #8e995b;
+  --medium-mount: #6c7c49;
+  --lower-mount: #536a55;
+  --water: #91C0C6ff;
+  --glare: #D8E4D3ff;
+}
+
+.sunset-theme {
+  --background: #e88c7dff;
+  --dark-cloud: #e56b6fff;
+  --light-cloud: #eaac8bff;
+  --sun: #eebba0ff;
+  --upper-mount: #6d597aff;
+  --medium-mount: #355070ff;
+  --lower-mount: #283c55ff;
+  --water: #915f78ff;
+  --glare: #b56576ff;
+}
+
+
+#background {
+  fill: var(--background);
+}
+
+#full_sun #sun {
+  fill: var(--sun);
+}
+
+#full_sun #big_ray,
+#full_sun #small_ray {
+  fill: var(--sun);
+  fill-opacity: 0.2;
+}
+
+#clouds #dark {
+  fill: var(--dark-cloud);
+}
+
+#clouds #dark_opacity {
+  fill: var(--dark-cloud);
+  fill-opacity: 0.7;
+}
+
+#clouds #light {
+  fill: var(--light-cloud);
+}
+
+#clouds #light_opacity {
+  fill: var(--light-cloud);
+  fill-opacity: 0.7;
+}
+
+#mounts #upper_level {
+  fill: var(--upper-mount);
+}
+
+#mounts #medium_level {
+  fill: var(--medium-mount);
+}
+
+#mounts #lower_level {
+  fill: var(--lower-mount);
+}
+
+#waterfall #water {
+  fill: var(--water);
+}
+
+#waterfall #waves #wave {
+  fill: var(--glare)
+}
+
+#foam #foam_light {
+  fill: var(--sun);
+}
+
+#foam #foam_dark {
+  fill: var(--water);
+}
+
+#bubbles #light_bubble {
+  fill: var(--sun);
+}
+
+#bubbles #dark_bubble {
+  fill: var(--water);
+}
+
+#river #water {
+  fill: var(--water);
+}
+
+#river #waves #light_wave {
+  fill: var(--sun);
+}
+
+#river #waves #dark_wave {
+  fill: var(--glare);
+}
