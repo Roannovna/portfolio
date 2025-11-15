@@ -1,4 +1,4 @@
-import { Picture } from './day-night-pic/picture.jsx';
+import { PictureNew } from './day-night-pic/picture-new.jsx';
 import { ipadTokens, Container } from '@/tokens/ipad-ui-tokens.jsx';
 
 
@@ -9,7 +9,7 @@ export function DayNightWidget({ id, className }) {
       className={className}
       {...ipadTokens.widget.large}
     >
-      <Picture />
+      <PictureNew />
     </Container>
   )
 }
