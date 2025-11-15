@@ -13,10 +13,9 @@ export const ipadTokens = {
   },
 };
 
-export const Container = ({ w, h, br, style: extraStyle, children, ...props }) => {
+export const Container = ({ className, w, h, br, style: extraStyle, children }) => {
   return (
-    <div 
-      {...props}
+    <div className={className}
       style={{
         width: w + "px",
         height: h + "px",

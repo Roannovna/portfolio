@@ -1,10 +1,9 @@
-import { ipadTokens, Container } from "@/tokens/ipad-ui-tokens.jsx";
+import { ipadTokens, Container } from "../../tokens/ipad-ui-tokens.jsx";
 import style from "./Notes.module.css";
 
-export function Notes({ id, className }) {
+export function Notes({ className }) {
   return (
     <Container 
-      id={id}
       className={className} 
       {...ipadTokens.widget.large} 
       style={{alignItems: "flex-start", 

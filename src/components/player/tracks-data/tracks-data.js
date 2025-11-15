@@ -1,5 +1,5 @@
-import { tracksLabels } from "@/assets/player/tracks-labels/imp";
-import { tracksMedia } from "@/assets/player/tracks/imp";
+import { tracksLabels } from "./tracks-labels/imp";
+import { tracksMedia } from "./tracks/imp";
 
 export const TRACKS = [
   {

@@ -1,27 +1,21 @@
 import style from './dock.module.css'
-import { projectIcons } from '@/assets/project-icons/imp';
+import { projectIcons } from './project-icons/imp';
 import { useState } from 'react';
-import { ipadTokens } from '@/tokens/ipad-ui-tokens.jsx';
-import { Iframe } from '@/components/UI/iframe';
-import { tourCastomIcons } from '@/assets/tour/imp';
-import { CustomBtn } from '@/components/UI/tour/custom-btn.js';
+import { ipadTokens } from '/src/tokens/ipad-ui-tokens';
+import { Iframe } from '../UI/iframe';
 
 const iconSize = { 
   width: ipadTokens.icon.spot.w, 
-  height: ipadTokens.icon.spot.h, 
+  height: ipadTokens.icon.spot.w, 
   borderRadius: ipadTokens.icon.spot.br 
 };
 
-export function Dock({ id, className, style: extraStyle, onOpenTour }) {
+export function Dock({ className, style: extraStyle }) {
   const [frameSrc, setFrameSrc] = useState(null);
 
   return (
     <>
-      <footer  id={id} className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
-
-        <CustomBtn type="primary" onClick={onOpenTour}>
-          <img src={tourCastomIcons.tourBtn} style={iconSize} alt="иконка тура" />
-        </CustomBtn>
+      <footer className={`${style.dock__container} ${className}`} style={{...extraStyle}}>
 
         <button style={iconSize} className={style.dock__button} onClick={() => setFrameSrc('https://roannovna.github.io/slozhno-sosredotochitsya/')}>
           <img src={projectIcons.slozhnoSosredotochitsya} alt="иконка сайта сложно сосредоточиться" />
