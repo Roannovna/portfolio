@@ -23,6 +23,39 @@
   100% { transform: scale(1.07); opacity: 0.3; }
 }
 
+#dark_opacity {
+  animation: darkCloudsOpacity 100s linear infinite;
+}
+
+#dark {
+  animation: darkClouds 80s linear infinite;
+}
+
+#light_opacity {
+  animation: lightCloudsOpacity 60s linear infinite;
+}
+
+#light {
+  animation: lightClouds 40s linear infinite;
+}
+
+@keyframes darkCloudsOpacity {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+@keyframes darkClouds {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+@keyframes lightCloudsOpacity {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+@keyframes lightClouds {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+
 
 
 
