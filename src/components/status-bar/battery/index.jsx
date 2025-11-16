@@ -6,15 +6,19 @@ export function BatteryLevel() {
 
   useEffect(() => {
     async function getBatteryInfo() {
-      if ('getBattery' in navigator) {
-        const battery = await navigator.getBattery();
-        setBattery(Math.round(battery.level * 100));
-
-        battery.addEventListener('levelchange', () => {
+      try {
+        if ('getBattery' in navigator) {
+          const battery = await navigator.getBattery();
           setBattery(Math.round(battery.level * 100));
-        });
-      } else {
-        setBattery(null);
+          
+          battery.addEventListener('levelchange', () => {
+            setBattery(Math.round(battery.level * 100));
+          });
+        } else {
+          setBattery(70);
+        }
+      } catch {
+        setBattery(70)
       }
     }
     getBatteryInfo();
