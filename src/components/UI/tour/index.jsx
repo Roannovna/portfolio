@@ -141,7 +141,7 @@
 // тут типа дофига вумная (как вутка)
 import { Tour } from 'antd';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { tourCastomIcons } from '@/assets/tour/imp';
+import { tourCastomIcons, tourCastomPointer } from '@/assets/tour/imp';
 import { ipadTokens } from '@/tokens/ipad-ui-tokens';
 
 export function TourAntd({ open, onClose }) {
@@ -209,7 +209,10 @@ export function TourAntd({ open, onClose }) {
       description: ( 
         <> 
           Цветовая гамма картинки сменяется в течение суток: ночь, рассвет, день и закат.
-          <br />Картинка нарисована лично в Figma; смена цветов реализована при помощи СSS, JS и React.
+          <br />Картинка нарисована лично в Figma; смена цветов и анимация реализована при помощи СSS, JS и React.
+          <br />
+          <br />Анимация активна при наведении курсора на виджет {''} <img src={tourCastomPointer} style={{ width: '14px', height: '14px' }} />
+          <br />На тач-устройствах анимация активна всегда.
         </> 
       ),
       target: () => document.querySelector('#day-night-widget'),
