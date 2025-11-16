@@ -1,4 +1,22 @@
-/* Солнце */
+@media (hover: hover) {
+  #day-night-widget:not(:hover):not(:focus-within) #big_ray,
+  #day-night-widget:not(:hover):not(:focus-within) #small_ray,
+  #day-night-widget:not(:hover):not(:focus-within) #dark_opacity,
+  #day-night-widget:not(:hover):not(:focus-within) #dark,
+  #day-night-widget:not(:hover):not(:focus-within) #light_opacity,
+  #day-night-widget:not(:hover):not(:focus-within) #light,
+  #day-night-widget:not(:hover):not(:focus-within) #waterfall #wave,
+  #day-night-widget:not(:hover):not(:focus-within) #foam_light:not(.foam_2),
+  #day-night-widget:not(:hover):not(:focus-within) #foam_light.foam_2,
+  #day-night-widget:not(:hover):not(:focus-within) #foam_dark:not(.foam_2),
+  #day-night-widget:not(:hover):not(:focus-within) #foam_dark.foam_2,
+  #day-night-widget:not(:hover):not(:focus-within) #bubbles .bubble,
+  #day-night-widget:not(:hover):not(:focus-within) #river #light_wave,
+  #day-night-widget:not(:hover):not(:focus-within) #river #dark_wave {
+    animation-play-state: paused;
+  }
+}
+
 #big_ray,
 #small_ray {
   transform-box: fill-box;
@@ -24,7 +42,6 @@
   100% { transform: scale(1.07); opacity: 0.3; }
 }
 
-/* Облака */
 #dark_opacity {
   animation: darkCloudsOpacity 100s linear infinite;
 }
@@ -139,3 +156,4 @@
   50% { transform: translate(-1.2px, 1.2px); opacity: 0.8; }
   100% { transform: translate(2.4px, 1.2px); opacity: 0.7; }
 }
+
