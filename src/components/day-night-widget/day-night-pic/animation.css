@@ -56,6 +56,17 @@
   100% { transform: translateX(300px); }
 }
 
+#waterfall #wave {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation-timing-function: ease-in-out;
+  animation: waterfallWaves 6s linear infinite;
+}
+
+@keyframes waterfallWaves {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(135px); }
+}
 
 
 
