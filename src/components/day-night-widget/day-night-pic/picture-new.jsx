@@ -38,6 +38,23 @@ export function PictureNew() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const bubbles = document.querySelectorAll('#bubbles #light_bubble, #bubbles #dark_bubble');
+    bubbles.forEach((el) => {
+      const dx = `${(Math.random() * 12 - 6).toFixed(1)}px`;
+      const dy = `${(Math.random() * 12 - 6).toFixed(1)}px`;
+      const dur = `${(Math.random() * 1 + 1).toFixed(2)}s`;
+      const delay = `${(Math.random() * 2).toFixed(2)}s`;
+      el.style.setProperty('--dx', dx);
+      el.style.setProperty('--dy', dy);
+      el.style.setProperty('--dur', dur);
+      el.style.setProperty('--delay', delay);
+      el.classList.add('bubble');
+    });
+  }, []);
+
+
+  
   return (
   <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="pic" className={currentTheme}>
