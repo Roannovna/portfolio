@@ -68,5 +68,45 @@
   100% { transform: translateY(135px); }
 }
 
+#foam_light,
+#foam_dark {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation-timing-function: ease-in-out;
+}
 
+#foam_light:not(.foam_2) {
+  animation: foamLight 2s infinite alternate-reverse;
+}
+#foam_light.foam_2 {
+  animation: foamLight2 3s infinite alternate;
+}
+#foam_dark:not(.foam_2) {
+  animation: foamDark 5s infinite alternate;
+}
+#foam_dark.foam_2 {
+  animation: foamDark2 4s infinite alternate-reverse;
+}
+
+@keyframes foamLight {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-4px, -3px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes foamLight2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4px, -3px) scale(1.03); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes foamDark {
+  0% { transform: translate(-2px, 0) scale(1); }
+  50% { transform: translate(-4px, -2px) scale(1.04); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes foamDark2 {
+  0% { transform: translate(2px, 0) scale(1); }
+  50% { transform: translate(4px, -2px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
 
