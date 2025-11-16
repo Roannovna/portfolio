@@ -1,4 +1,3 @@
-/* Smooth transitions for theme changes */
 #pic {
   transition: all 10s ease-in-out;
 }
@@ -56,12 +55,12 @@
   fill: var(--background);
 }
 
-#sun  #sun{
+#full_sun #sun {
   fill: var(--sun);
 }
 
-#sun #big_ray,
-#sun #small_ray {
+#full_sun #big_ray,
+#full_sun #small_ray {
   fill: var(--sun);
   fill-opacity: 0.2;
 }
@@ -112,11 +111,11 @@
   fill: var(--water);
 }
 
-#bubbles #bubbles_light {
+#bubbles #light_bubble {
   fill: var(--sun);
 }
 
-#bubbles #bubbles_dark {
+#bubbles #dark_bubble {
   fill: var(--water);
 }
 
@@ -124,10 +123,10 @@
   fill: var(--water);
 }
 
-#river #waves #light_waves {
+#river #waves #light_wave {
   fill: var(--sun);
 }
 
-#river #waves #dark_waves {
+#river #waves #dark_wave {
   fill: var(--glare);
 }

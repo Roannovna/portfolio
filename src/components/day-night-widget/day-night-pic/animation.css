@@ -1,0 +1,159 @@
+@media (hover: hover) {
+  #day-night-widget:not(:hover):not(:focus-within) #big_ray,
+  #day-night-widget:not(:hover):not(:focus-within) #small_ray,
+  #day-night-widget:not(:hover):not(:focus-within) #dark_opacity,
+  #day-night-widget:not(:hover):not(:focus-within) #dark,
+  #day-night-widget:not(:hover):not(:focus-within) #light_opacity,
+  #day-night-widget:not(:hover):not(:focus-within) #light,
+  #day-night-widget:not(:hover):not(:focus-within) #waterfall #wave,
+  #day-night-widget:not(:hover):not(:focus-within) #foam_light:not(.foam_2),
+  #day-night-widget:not(:hover):not(:focus-within) #foam_light.foam_2,
+  #day-night-widget:not(:hover):not(:focus-within) #foam_dark:not(.foam_2),
+  #day-night-widget:not(:hover):not(:focus-within) #foam_dark.foam_2,
+  #day-night-widget:not(:hover):not(:focus-within) #bubbles .bubble,
+  #day-night-widget:not(:hover):not(:focus-within) #river #light_wave,
+  #day-night-widget:not(:hover):not(:focus-within) #river #dark_wave {
+    animation-play-state: paused;
+  }
+}
+
+#big_ray,
+#small_ray {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation-timing-function: ease-in-out;
+}
+
+#big_ray {
+  animation: bigRaySun 3s infinite alternate;
+}
+
+#small_ray {
+  animation: smallRaySun 2.5s infinite alternate;
+}
+
+@keyframes bigRaySun {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); opacity: 0.25; }
+}
+
+@keyframes smallRaySun {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.07); opacity: 0.3; }
+}
+
+#dark_opacity {
+  animation: darkCloudsOpacity 100s linear infinite;
+}
+
+#dark {
+  animation: darkClouds 80s linear infinite;
+}
+
+#light_opacity {
+  animation: lightCloudsOpacity 60s linear infinite;
+}
+
+#light {
+  animation: lightClouds 40s linear infinite;
+}
+
+@keyframes darkCloudsOpacity {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+@keyframes darkClouds {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+@keyframes lightCloudsOpacity {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+@keyframes lightClouds {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(300px); }
+}
+
+#waterfall #wave {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation-timing-function: ease-in-out;
+  animation: waterfallWaves 15s linear infinite;
+}
+
+@keyframes waterfallWaves {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(135px); }
+}
+
+#foam_light,
+#foam_dark {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation-timing-function: ease-in-out;
+}
+
+#foam_light:not(.foam_2) {
+  animation: foamLight 2s infinite alternate-reverse;
+}
+
+#foam_light.foam_2 {
+  animation: foamLight2 3s infinite alternate;
+}
+
+#foam_dark:not(.foam_2) {
+  animation: foamDark 5s infinite alternate;
+}
+
+#foam_dark.foam_2 {
+  animation: foamDark2 4s infinite alternate-reverse;
+}
+
+@keyframes foamLight {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-4px, -3px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes foamLight2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4px, -3px) scale(1.03); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes foamDark {
+  0% { transform: translate(-2px, 0) scale(1); }
+  50% { transform: translate(-4px, -2px) scale(1.04); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes foamDark2 {
+  0% { transform: translate(2px, 0) scale(1); }
+  50% { transform: translate(4px, -2px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+#bubbles .bubble {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: bubble var(--dur) ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+}
+
+@keyframes bubble {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1.1); }
+}
+
+#river #light_wave,
+#river #dark_wave {
+  animation: riverWave 4s alternate infinite;
+}
+
+@keyframes riverWave {
+  0% { transform: translate(0); opacity: 1; }
+  50% { transform: translate(-1.2px, 1.2px); opacity: 0.8; }
+  100% { transform: translate(2.4px, 1.2px); opacity: 0.7; }
+}
+
