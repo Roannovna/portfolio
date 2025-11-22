@@ -11,17 +11,19 @@ export function Player({ id, className }) {
   const audioRef = useRef(null);
 
   const currentTrack = TRACKS[currentTrackIndex];
+  
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.src = currentTrack.media;
+  }, [currentTrack.media]);
 
   useEffect(() => {
-    if (!audioRef.current) return;
-    audioRef.current.src = currentTrack.media;
-    if (isPlaying) audioRef.current.play();
-  }, [currentTrackIndex]);
-
-  useEffect(() => {
-    if (!audioRef.current) return;
-    isPlaying ? audioRef.current.play() : audioRef.current.pause();
-  }, [isPlaying]);
+  const audio = audioRef.current;
+  if (!audio) return;
+  if (isPlaying) audio.play();
+  else audio.pause();
+  }, [isPlaying, currentTrack.media]);
 
   const handlePlayPause = () => setIsPlaying(p => !p)
   const handleNext = () => setCurrentTrackIndex(i => (i + 1) % TRACKS.length)
@@ -35,13 +37,10 @@ export function Player({ id, className }) {
       style={{ padding: 0 }}
     >
       <div className={style.player__container}>
-        <audio ref={audioRef} />
-        <div className={style.vinyl_player}>
+        <audio ref={audioRef} preload="none"/>
+        <div className={`${style.vinyl_player} ${isPlaying ? style.is_playing : ''}`}>
           <div className={style.ton_arm__base}></div>
-          <div className={style.ton_arm}>
-            {/* <div className={style.ton_arm__shoulder}></div>
-            <div className={style.ton_arm__arm}></div> */}
-          </div>
+          <div className={style.ton_arm}></div>
           <div className={style.vinyl_record}>
             <div className={style.vinyl_record__disc}></div>
             <div className={style.vinyl_record__label}><img src={isPlaying ? currentTrack.cover : def_label} alt="disk label" /></div>
@@ -68,5 +67,3 @@ export function Player({ id, className }) {
     </Container>
   )
 }
-
-// TODO: настроить анимацию из двух частей
