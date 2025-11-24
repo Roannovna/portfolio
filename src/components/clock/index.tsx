@@ -1,18 +1,19 @@
-import style from './clock.module.css';
-import { useEffect, useState } from 'react';
-import { ipadTokens, Container } from '@/tokens/ipad-ui-tokens.jsx';
+import style from "./clock.module.css";
+import { useEffect, useState } from "react";
+import { ipadTokens, Container } from "@/tokens/ipad-ui-tokens";
 
 const colors = [
-  "rgba(207, 151, 153, 0.6)", 
-  "rgba(207, 151, 153, 0.7)", 
+  "rgba(207, 151, 153, 0.6)",
+  "rgba(207, 151, 153, 0.7)",
   "rgba(255, 213, 215, 0.7)",
-  "rgba(207, 151, 153, 0.6)", 
-  "rgba(207, 151, 153, 0.7)"];
+  "rgba(207, 151, 153, 0.6)",
+  "rgba(207, 151, 153, 0.7)",
+];
 const rotations = [-6, 5, 0, -4, 5];
 
-export function Clock({ id, className }) {
+export function Clock({ id, className }: { id?: string; className?: string }) {
   const [time, setTime] = useState(new Date());
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date());
@@ -24,14 +25,13 @@ export function Clock({ id, className }) {
   const hh = time.getHours().toString().padStart(2, "0");
   const mm = time.getMinutes().toString().padStart(2, "0");
 
-  const timeString = [hh[0], hh[1], ':', mm[0], mm[1]];
-
+  const timeString = [hh[0], hh[1], ":", mm[0], mm[1]];
 
   return (
     <Container
       id={id}
-      className={className} 
-      {...ipadTokens.widget.medium} 
+      className={className}
+      {...ipadTokens.widget.medium}
       style={{ padding: 0 }}
     >
       <div className={style.clock}>
@@ -48,5 +48,5 @@ export function Clock({ id, className }) {
         ))}
       </div>
     </Container>
-  )
+  );
 }
