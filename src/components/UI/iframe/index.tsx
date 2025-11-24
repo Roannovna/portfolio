@@ -1,6 +1,14 @@
-import style from './iframe.module.css'
+import style from "./iframe.module.css";
 
-export function Iframe({ src, onClose, open }) {
+export function Iframe({
+  src,
+  onClose,
+  open,
+}: {
+  src: string;
+  onClose: () => void;
+  open: boolean;
+}) {
   if (!src || !open) return null;
 
   return (
@@ -8,5 +16,5 @@ export function Iframe({ src, onClose, open }) {
       <button className={style.frame__close_btn} onClick={onClose} />
       <iframe src={src} />
     </div>
-  )
+  );
 }

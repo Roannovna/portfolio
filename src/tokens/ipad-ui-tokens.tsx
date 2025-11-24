@@ -13,7 +13,7 @@ export const ipadTokens = {
   },
 };
 
-export const Container = ({ w, h, br, style: extraStyle, children, ...props }) => {
+export const Container = ({ w, h, br, style: extraStyle, children, ...props }: any) => {
   return (
     <div 
       {...props}

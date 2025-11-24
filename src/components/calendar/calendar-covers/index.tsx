@@ -1,5 +1,5 @@
-import { calendarCoverPics } from '@/assets/calendar-covers/imp';
-import style from './calendar-covers.module.css';
+import { calendarCoverPics } from "@/assets/calendar-covers/imp.ts";
+import style from "./calendar-covers.module.css";
 
 export function CalendarCovers() {
   const currentDate = new Date();
@@ -37,7 +37,7 @@ export function CalendarCovers() {
 
   return (
     <div className={style.calendar__cover}>
-      <img src={src} alt={alt} className={style.calendar_cover__image}/>
+      <img src={src} alt={alt} className={style.calendar_cover__image} />
     </div>
-)
+  );
 }

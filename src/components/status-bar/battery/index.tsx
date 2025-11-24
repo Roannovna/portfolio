@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import style from './battery.module.css'
 
 export function BatteryLevel() {
-  const [battery, setBattery] = useState(null);
+  const [battery, setBattery] = useState<number | null>(null);
 
   useEffect(() => {
     async function getBatteryInfo() {
       try {
         if ('getBattery' in navigator) {
-          const battery = await navigator.getBattery();
+          const battery = await (navigator as any).getBattery();
           setBattery(Math.round(battery.level * 100));
           
           battery.addEventListener('levelchange', () => {
