@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { RouterProvider } from 'react-router'
 import './index.css'
-import App from './App.jsx'
 import '@ant-design/v5-patch-for-react-19'
+import Router from './router.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={Router} />
   </StrictMode>,
 )
