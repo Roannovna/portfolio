@@ -1,3 +1,5 @@
+import { formatBirthDate } from "@/utils/formatDate";
+
 export function ContactCard({ contact }) {
   if (!contact) return <section><p>Выберите контакт</p></section>;
 
@@ -8,7 +10,7 @@ export function ContactCard({ contact }) {
       <ul>
         <li>
           <p>mobile</p>
-          <div>{contact.phone}</div>
+          <div>{`+1 ${contact.phone}`}</div>
         </li>
         <li>
           <p>email</p>
@@ -16,7 +18,7 @@ export function ContactCard({ contact }) {
         </li>
         <li>
           <p>birthday</p>
-          <div>{contact.dob.date}</div>
+          <div>{formatBirthDate(contact.dob.date)}</div>
         </li>
         <li>
           <p>address</p>

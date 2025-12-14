@@ -7,3 +7,9 @@ export const formatDate = new Intl.DateTimeFormat("ru", {
 export const formatDateMonth = new Intl.DateTimeFormat("ru", {
   month: "long",
 });
+
+export const formatBirthDate = (date) => new Date(date).toLocaleDateString("ru-RU", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+});
