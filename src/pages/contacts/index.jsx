@@ -1,27 +1,14 @@
 import { ContactCard } from "@/components/contacts-page/card";
 import { ContactList } from "@/components/contacts-page/list";
 import { useContacts } from "@/hooks/useContacts";
+import { useGroupedContacts } from "@/hooks/useGroupedContacts";
 import { ipadTokens } from "@/tokens/ipad-ui-tokens";
 import styles from "./contacts.module.css";
 
 function Contacts() {
   const { contacts, selectedContact, setSelectedContact, loading, error } = useContacts();
 
-  const sortedContacts = [...contacts].sort((a, b) =>
-    a.name.first.localeCompare(b.name.first, 'en', { sensitivity: 'base' })
-  );
-
-  const groupedContacts = sortedContacts.reduce((acc, contact) => {
-    const firstLatter = contact.name.first[0].toUpperCase();
-
-    if (!acc[firstLatter]) {
-      acc[firstLatter] = [];
-    }
-
-    acc[firstLatter].push(contact);
-    return acc;
-  }, {});
-
+  const groupedContacts = useGroupedContacts(contacts);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
