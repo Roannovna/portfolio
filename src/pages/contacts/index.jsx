@@ -30,20 +30,22 @@ function Contacts() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <main className={styles.contacts} style={{ gap: ipadTokens.spacing.uniGap }}>
-      <section className={styles.contactsList}>
-        <SearchInput value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-        {Object.entries(groupedContacts).map(([letter, contacts]) => (
-          <div key={letter}>
-            <h2>{letter}</h2>
-            <ContactList contacts={contacts} setSelectedContact={setSelectedContact} />
-          </div>
-        ))}
-      </section>
-      <section className={styles.contactsCard}>
-        <ContactCard contact={selectedContact} />
-      </section>
-    </main>
+    <div className={styles.contacts__wrapper}>
+      <main className={styles.contacts} style={{ gap: ipadTokens.spacing.uniGap }}>
+        <section className={styles.contacts_list}>
+          <SearchInput value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+          {Object.entries(groupedContacts).map(([letter, contacts]) => (
+            <div key={letter}>
+              <h2>{letter}</h2>
+              <ContactList contacts={contacts} setSelectedContact={setSelectedContact} />
+            </div>
+          ))}
+        </section>
+        <section className={styles.contacts_card}>
+          <ContactCard contact={selectedContact} />
+        </section>
+      </main>
+    </div>
   );
 }
 

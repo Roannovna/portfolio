@@ -1,3 +1,11 @@
+.contacts__wrapper {
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contacts {
   width: 90dvw;
   max-width: 1000px;
@@ -5,15 +13,16 @@
   grid-template-columns: repeat(2, 1fr);
   /* TODO: вынести в переменную и изменить в home.module.css */
   margin: 30px 0;
+
 }
 
-.contactsList {
+.contacts_list {
   grid-column: 1 / span 1;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.contactsCard {
+.contacts_card {
   grid-column: 2 / span 1;
 }

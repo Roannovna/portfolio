@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  padding: 20px 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(60px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.card__title {
+  font-family: "Rounded", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.card__img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-opacity);
+  backdrop-filter: var(--blur);
+  padding: 10px;
+  width: clamp(270px, 60%, 100%);
+}
+
+.list__item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-width: min-content;
+}
+
+.list__item:not(:last-child) {
+  border-bottom: 1px solid var(--grey);
+}

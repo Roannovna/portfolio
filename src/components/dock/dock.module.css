@@ -8,6 +8,7 @@
   width: fit-content;
   gap: 10px;
   background-color: var(--white-opacity);
+  backdrop-filter: var(--blur);
   padding: 10px 15px;
   min-width: 154px;
   position: sticky;
