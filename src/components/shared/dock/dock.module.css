@@ -11,12 +11,12 @@
   backdrop-filter: var(--blur);
   padding: 10px 15px;
   min-width: 154px;
-  position: sticky;
+  /* position: sticky; */
   left: 50%;
   transform: translateX(-50%);
-  top: 0;
-  bottom: 20px;
-  z-index: 100;
+  /* top: 0; */
+  /* bottom: 20px; */
+  /* z-index: 100; */
 }
 
 .dock__button {

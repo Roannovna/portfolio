@@ -10,13 +10,12 @@
   --orange: rgb(255, 149, 0);
   --yellow: rgb(255, 214, 10);
   --white: rgb(255, 255, 255);
-  /* --white-opacity: rgba(255, 255, 255, 0.45); */
-  /* --white-opacity: color-mix(in srgb, rgb(224, 224, 224) 10%, var(--white) 40%); */
   --white-opacity: color-mix(in srgb, var(--grey) 10%, var(--dark-grey) 10%);
   --blur: blur(90px);
   --black: rgb(0, 0, 0);
   --transform-hover: scale(1.1);
   --transition-hover: transform 0.2s ease-in-out;
+  --page-padding: 50px 0 100px;
 }
 
 *,
@@ -37,6 +36,7 @@
   align-items: center;
   min-height: 100dvh;
   width: 100%;
+  position: relative;
 }
 
 body {

@@ -1,11 +1,11 @@
-import style from './status-bar.module.css'
+import { formatDate } from '@/utils/formatDate.js'
+import { formatTime } from '@/utils/formatTime.js'
 import { useEffect, useState } from 'react'
 import { BatteryLevel } from './battery/index.jsx'
 import { NetworkStatus } from './network/index.jsx'
-import { formatDate } from '@/utils/formatDate.js'
-import { formatTime } from '@/utils/formatTime.js'
+import style from './status-bar.module.css'
 
-export function StatusBar({ id }) {
+export function StatusBar({ id, className }) {
   const [time, setTime] = useState();
   const [date, setDate] = useState();
 
@@ -21,7 +21,7 @@ export function StatusBar({ id }) {
   }, []);
 
   return (
-    <header id={id} className={style.status_bar}>
+    <header id={id} className={`${style.status_bar} ${className}`}>
       <div className={style.status_bar__left}>
         <div className={style.status_bar__time}>{time}</div>
         <div className={style.status_bar__date}>{date}</div>

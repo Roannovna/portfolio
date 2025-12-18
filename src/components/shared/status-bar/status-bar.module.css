@@ -6,12 +6,12 @@
   flex-wrap: nowrap;
   font-size: 16px;
   font-weight: 500;
-  position: fixed;
-  z-index: 100;
+  /* position: fixed;
+  z-index: 100; */
   background-color: var(--white-opacity);
   backdrop-filter: var(--blur);
   padding: 5px 7%;
-  width: 100%;
+  width: 100dvw;
   border-radius: 0 0 10px 10px;
 }
 

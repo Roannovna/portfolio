@@ -1,0 +1,11 @@
+.status-bar {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.dock {
+  position: fixed;
+  bottom: 20px;
+  z-index: 100;
+}
