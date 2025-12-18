@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { StatusBar } from "@/components/status-bar/index.jsx";
-import { Dock } from "@/components/dock/index.jsx";
-import { ipadTokens } from "@/tokens/ipad-ui-tokens.jsx";
+import { Dock } from "@/components/shared/dock/index.jsx";
+import { StatusBar } from "@/components/shared/status-bar/index.jsx";
 import { TourAntd } from "@/components/UI/tour/index.jsx";
+import { ipadTokens } from "@/tokens/ipad-ui-tokens.jsx";
+import { useState } from "react";
 import { Outlet } from "react-router";
 
 function App() {

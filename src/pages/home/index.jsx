@@ -1,11 +1,11 @@
+import { Calendar } from "@/components/home-page/calendar";
+import { Clock } from "@/components/home-page/clock";
+import { Contacts } from "@/components/home-page/contacts";
+import { DayNightWidget } from "@/components/home-page/day-night-widget";
+import { Notes } from "@/components/home-page/notes";
+import { Player } from "@/components/home-page/player";
+import { TechStack } from "@/components/home-page/tech-stack";
 import style from "./home.module.css";
-import { Clock } from "@/components/clock";
-import { Calendar } from "@/components/calendar";
-import { Contacts } from "@/components/contacts";
-import { Player } from "@/components/player";
-import { DayNightWidget } from "@/components/day-night-widget";
-import { TechStack } from "@/components/tech-stack";
-import { Notes } from "@/components/notes";
 
 function Home() {
   return (
