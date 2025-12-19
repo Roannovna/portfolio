@@ -34,12 +34,14 @@ function Contacts() {
       <main className={styles.contacts} style={{ gap: ipadTokens.spacing.uniGap }}>
         <section className={styles.contacts_list}>
           <SearchInput value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-          {Object.entries(groupedContacts).map(([letter, contacts]) => (
-            <div key={letter}>
-              <h2>{letter}</h2>
-              <ContactList contacts={contacts} setSelectedContact={setSelectedContact} />
-            </div>
-          ))}
+          <div className={styles.contacts_list__content}>
+            {Object.entries(groupedContacts).map(([letter, contacts]) => (
+              <div key={letter}>
+                <h2 className={styles.contacts_list__letter}>{letter}</h2>
+                <ContactList contacts={contacts} setSelectedContact={setSelectedContact} />
+              </div>
+            ))}
+          </div>
         </section>
         <section className={styles.contacts_card}>
           <ContactCard contact={selectedContact} />

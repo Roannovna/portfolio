@@ -1,26 +1,59 @@
 .contacts__wrapper {
-  width: 100%;
+  width: 100dvw;
+  height: 100dvh;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--page-padding);
+  overflow: hidden;
 }
 
 .contacts {
   width: 90dvw;
   max-width: 1000px;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  overflow: hidden;
 }
 
 .contacts_list {
   grid-column: 1 / span 1;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.contacts_list__content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contacts_list__letter {
+  font-family: "SF Pro", sans-serif;
+  font-size: 17px;
+  font-weight: regular;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-left: 5px;
+}
+
+.contacts_list__letter::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  width: calc(100% - 5px - 5px);
+  border-bottom: 2px solid var(--grey);
 }
 
 .contacts_card {
   grid-column: 2 / span 1;
+  width: 100%;
+  top: 0;
+  right: 0;
 }

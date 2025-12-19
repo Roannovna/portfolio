@@ -1,13 +1,33 @@
+.list {
+  gap: 0;
+}
+
 .list__item {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
+  padding: 5px;
   cursor: pointer;
   font-family: "SF Pro", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: regular;
   letter-spacing: 0.02em;
+  position: relative;
+}
+
+.list__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  width: calc(100% - 40px - 10px - 5px);
+  border-bottom: 1px solid var(--grey);
+}
+
+.list__item:hover {
+  background-color: var(--blue);
+  border-radius: 8px;
 }
 
 .list__item img {
