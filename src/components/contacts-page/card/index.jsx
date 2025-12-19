@@ -3,7 +3,7 @@ import { formatBirthDate } from "@/utils/formatDate";
 import styles from "./card.module.css";
 
 export function ContactCard({ contact }) {
-  if (!contact) return <section><p>Выберите контакт</p></section>;
+  if (!contact) return <section className={styles.card__me}><p>Выберите контакт</p></section>;
 
   return (
     <section className={styles.card} style={{"--bg-img": `url(${contact.picture.large})`, borderRadius: ipadTokens.widget.large.br}}>

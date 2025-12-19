@@ -10,8 +10,7 @@
 }
 
 .contacts {
-  width: 90dvw;
-  max-width: 1000px;
+  width: 80dvw;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
