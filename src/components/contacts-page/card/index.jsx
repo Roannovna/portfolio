@@ -1,9 +1,10 @@
 import { ipadTokens } from "@/tokens/ipad-ui-tokens";
 import { formatBirthDate } from "@/utils/formatDate";
+import { myCard } from "../data/my-card";
 import styles from "./card.module.css";
 
 export function ContactCard({ contact }) {
-  if (!contact) return <section className={styles.card__me}><p>Выберите контакт</p></section>;
+  if (!contact) contact = myCard;
 
   return (
     <section className={styles.card} style={{"--bg-img": `url(${contact.picture.large})`, borderRadius: ipadTokens.widget.large.br}}>
@@ -12,7 +13,7 @@ export function ContactCard({ contact }) {
       <ul className={styles.card__list} style={{borderRadius: ipadTokens.widget.large.br}}>
         <li className={styles.list__item}>
           <p>mobile</p>
-          <div>{`+1 ${contact.phone}`}</div>
+          <div>{contact.phone}</div>
         </li>
         <li className={styles.list__item}>
           <p>email</p>

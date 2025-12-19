@@ -18,6 +18,30 @@
   overflow: hidden;
 }
 
+.contacts_list__myCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  font-family: "SF Pro", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.contacts_list__myCard__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contacts_list__myCard__info {
+  font-size: 13px;
+  color: var(--grey);
+}
+
 .contacts_list {
   grid-column: 1 / span 1;
   width: 100%;

@@ -24,7 +24,10 @@ function Contacts() {
     });
   }, [contacts, debouncedSearchQuery]);
 
-  const groupedContacts = useGroupedContacts(filteredContacts);
+  const myContact = contacts.find(c => c.login.uuid === 'my-personal-card-uuid');
+  const otherContacts = filteredContacts.filter(c => c.login.uuid !== 'my-personal-card-uuid');
+
+  const groupedContacts = useGroupedContacts(otherContacts);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -35,6 +38,18 @@ function Contacts() {
         <section className={styles.contacts_list}>
           <SearchInput value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
           <div className={styles.contacts_list__content}>
+            {myContact && (
+              <div 
+                className={styles.contacts_list__myCard} 
+                onClick={() => setSelectedContact(myContact)}
+              >
+                <img src={myContact.picture.large} alt="" className={styles.contacts_list__myCard__img}/>
+                <div className={styles.contacts_list__myCard__name}>
+                  {myContact.name.first} {myContact.name.last}
+                  <p className={styles.contacts_list__myCard__info}>Моя карточка</p>
+                </div>
+              </div>
+            )}
             {Object.entries(groupedContacts).map(([letter, contacts]) => (
               <div key={letter}>
                 <h2 className={styles.contacts_list__letter}>{letter}</h2>
