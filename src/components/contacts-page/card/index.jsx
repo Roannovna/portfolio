@@ -1,5 +1,6 @@
 import { ipadTokens } from "@/tokens/ipad-ui-tokens";
 import { formatBirthDate } from "@/utils/formatDate";
+import { formatPhoneWithCode } from "@/utils/phoneUtils";
 import { myCard } from "../data/my-card";
 import styles from "./card.module.css";
 
@@ -13,7 +14,7 @@ export function ContactCard({ contact }) {
       <ul className={styles.card__list} style={{borderRadius: ipadTokens.widget.large.br}}>
         <li className={styles.list__item}>
           <p>mobile</p>
-          <div>{contact.phone}</div>
+          <div>{formatPhoneWithCode(contact.phone, contact.location.country)}</div>
         </li>
         <li className={styles.list__item}>
           <p>email</p>

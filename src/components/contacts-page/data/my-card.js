@@ -6,17 +6,18 @@ export const myCard = {
 		first: "Anna",
 		last: "Ro",
 	},
-	phone: "7 905 052 56 35",
+	phone: "(905) 052-5635",
 	email: "roannovna@gmail.com",
 	dob: {
 		date: "1997-02-15",
 	},
 	location: {
-		city: "Voronezh",
 		street: {
 			name: "Studenskaya",
 			number: "12a",
 		},
+		city: "Voronezh",
+		country: "Russia",
 	},
 	picture: {
 		large: "src/assets/player/disc-label/roannovna.png",
